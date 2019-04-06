@@ -1,0 +1,460 @@
+Simulator report for COUNTER32B
+Fri Dec 08 19:19:53 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 136 nodes    ;
+; Simulation Coverage         ;      19.88 % ;
+; Total Number of Transitions ; 809          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C10E144C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      19.88 % ;
+; Total nodes checked                                 ; 136          ;
+; Total output ports checked                          ; 166          ;
+; Total output ports with complete 1/0-value coverage ; 33           ;
+; Total output ports with no 1/0-value coverage       ; 128          ;
+; Total output ports with no 1-value coverage         ; 128          ;
+; Total output ports with no 0-value coverage         ; 133          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |COUNTER32B|CQI[1]           ; |COUNTER32B|CQI[1]           ; q                ;
+; |COUNTER32B|CQI[2]           ; |COUNTER32B|CQI[2]           ; q                ;
+; |COUNTER32B|CQI[3]           ; |COUNTER32B|CQI[3]           ; q                ;
+; |COUNTER32B|CQI[4]           ; |COUNTER32B|CQI[4]           ; q                ;
+; |COUNTER32B|CQI[1]~32        ; |COUNTER32B|CQI[1]~32        ; combout          ;
+; |COUNTER32B|CQI[1]~32        ; |COUNTER32B|CQI[1]~33        ; cout             ;
+; |COUNTER32B|CQI[2]~34        ; |COUNTER32B|CQI[2]~34        ; combout          ;
+; |COUNTER32B|CQI[2]~34        ; |COUNTER32B|CQI[2]~35        ; cout             ;
+; |COUNTER32B|CQI[3]~36        ; |COUNTER32B|CQI[3]~36        ; combout          ;
+; |COUNTER32B|CQI[3]~36        ; |COUNTER32B|CQI[3]~37        ; cout             ;
+; |COUNTER32B|CQI[4]~38        ; |COUNTER32B|CQI[4]~38        ; combout          ;
+; |COUNTER32B|CQI[4]~38        ; |COUNTER32B|CQI[4]~39        ; cout             ;
+; |COUNTER32B|CQI[5]~40        ; |COUNTER32B|CQI[5]~40        ; combout          ;
+; |COUNTER32B|CQI[5]~40        ; |COUNTER32B|CQI[5]~41        ; cout             ;
+; |COUNTER32B|CQI[6]~42        ; |COUNTER32B|CQI[6]~42        ; combout          ;
+; |COUNTER32B|CQI[0]           ; |COUNTER32B|CQI[0]           ; q                ;
+; |COUNTER32B|CQI[0]~31        ; |COUNTER32B|CQI[0]~31        ; combout          ;
+; |COUNTER32B|DOUT[0]~output   ; |COUNTER32B|DOUT[0]~output   ; o                ;
+; |COUNTER32B|DOUT[0]          ; |COUNTER32B|DOUT[0]          ; padout           ;
+; |COUNTER32B|DOUT[1]~output   ; |COUNTER32B|DOUT[1]~output   ; o                ;
+; |COUNTER32B|DOUT[1]          ; |COUNTER32B|DOUT[1]          ; padout           ;
+; |COUNTER32B|DOUT[2]~output   ; |COUNTER32B|DOUT[2]~output   ; o                ;
+; |COUNTER32B|DOUT[2]          ; |COUNTER32B|DOUT[2]          ; padout           ;
+; |COUNTER32B|DOUT[3]~output   ; |COUNTER32B|DOUT[3]~output   ; o                ;
+; |COUNTER32B|DOUT[3]          ; |COUNTER32B|DOUT[3]          ; padout           ;
+; |COUNTER32B|DOUT[4]~output   ; |COUNTER32B|DOUT[4]~output   ; o                ;
+; |COUNTER32B|DOUT[4]          ; |COUNTER32B|DOUT[4]          ; padout           ;
+; |COUNTER32B|FIN~input        ; |COUNTER32B|FIN~input        ; o                ;
+; |COUNTER32B|FIN              ; |COUNTER32B|FIN              ; padout           ;
+; |COUNTER32B|CLR~input        ; |COUNTER32B|CLR~input        ; o                ;
+; |COUNTER32B|CLR              ; |COUNTER32B|CLR              ; padout           ;
+; |COUNTER32B|FIN~inputclkctrl ; |COUNTER32B|FIN~inputclkctrl ; outclk           ;
+; |COUNTER32B|CLR~inputclkctrl ; |COUNTER32B|CLR~inputclkctrl ; outclk           ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |COUNTER32B|CQI[6]          ; |COUNTER32B|CQI[6]          ; q                ;
+; |COUNTER32B|CQI[7]          ; |COUNTER32B|CQI[7]          ; q                ;
+; |COUNTER32B|CQI[8]          ; |COUNTER32B|CQI[8]          ; q                ;
+; |COUNTER32B|CQI[9]          ; |COUNTER32B|CQI[9]          ; q                ;
+; |COUNTER32B|CQI[10]         ; |COUNTER32B|CQI[10]         ; q                ;
+; |COUNTER32B|CQI[11]         ; |COUNTER32B|CQI[11]         ; q                ;
+; |COUNTER32B|CQI[12]         ; |COUNTER32B|CQI[12]         ; q                ;
+; |COUNTER32B|CQI[13]         ; |COUNTER32B|CQI[13]         ; q                ;
+; |COUNTER32B|CQI[14]         ; |COUNTER32B|CQI[14]         ; q                ;
+; |COUNTER32B|CQI[15]         ; |COUNTER32B|CQI[15]         ; q                ;
+; |COUNTER32B|CQI[16]         ; |COUNTER32B|CQI[16]         ; q                ;
+; |COUNTER32B|CQI[17]         ; |COUNTER32B|CQI[17]         ; q                ;
+; |COUNTER32B|CQI[18]         ; |COUNTER32B|CQI[18]         ; q                ;
+; |COUNTER32B|CQI[19]         ; |COUNTER32B|CQI[19]         ; q                ;
+; |COUNTER32B|CQI[20]         ; |COUNTER32B|CQI[20]         ; q                ;
+; |COUNTER32B|CQI[21]         ; |COUNTER32B|CQI[21]         ; q                ;
+; |COUNTER32B|CQI[22]         ; |COUNTER32B|CQI[22]         ; q                ;
+; |COUNTER32B|CQI[23]         ; |COUNTER32B|CQI[23]         ; q                ;
+; |COUNTER32B|CQI[24]         ; |COUNTER32B|CQI[24]         ; q                ;
+; |COUNTER32B|CQI[25]         ; |COUNTER32B|CQI[25]         ; q                ;
+; |COUNTER32B|CQI[26]         ; |COUNTER32B|CQI[26]         ; q                ;
+; |COUNTER32B|CQI[27]         ; |COUNTER32B|CQI[27]         ; q                ;
+; |COUNTER32B|CQI[28]         ; |COUNTER32B|CQI[28]         ; q                ;
+; |COUNTER32B|CQI[29]         ; |COUNTER32B|CQI[29]         ; q                ;
+; |COUNTER32B|CQI[30]         ; |COUNTER32B|CQI[30]         ; q                ;
+; |COUNTER32B|CQI[31]         ; |COUNTER32B|CQI[31]         ; q                ;
+; |COUNTER32B|CQI[6]~42       ; |COUNTER32B|CQI[6]~43       ; cout             ;
+; |COUNTER32B|CQI[7]~44       ; |COUNTER32B|CQI[7]~44       ; combout          ;
+; |COUNTER32B|CQI[7]~44       ; |COUNTER32B|CQI[7]~45       ; cout             ;
+; |COUNTER32B|CQI[8]~46       ; |COUNTER32B|CQI[8]~46       ; combout          ;
+; |COUNTER32B|CQI[8]~46       ; |COUNTER32B|CQI[8]~47       ; cout             ;
+; |COUNTER32B|CQI[9]~48       ; |COUNTER32B|CQI[9]~48       ; combout          ;
+; |COUNTER32B|CQI[9]~48       ; |COUNTER32B|CQI[9]~49       ; cout             ;
+; |COUNTER32B|CQI[10]~50      ; |COUNTER32B|CQI[10]~50      ; combout          ;
+; |COUNTER32B|CQI[10]~50      ; |COUNTER32B|CQI[10]~51      ; cout             ;
+; |COUNTER32B|CQI[11]~52      ; |COUNTER32B|CQI[11]~52      ; combout          ;
+; |COUNTER32B|CQI[11]~52      ; |COUNTER32B|CQI[11]~53      ; cout             ;
+; |COUNTER32B|CQI[12]~54      ; |COUNTER32B|CQI[12]~54      ; combout          ;
+; |COUNTER32B|CQI[12]~54      ; |COUNTER32B|CQI[12]~55      ; cout             ;
+; |COUNTER32B|CQI[13]~56      ; |COUNTER32B|CQI[13]~56      ; combout          ;
+; |COUNTER32B|CQI[13]~56      ; |COUNTER32B|CQI[13]~57      ; cout             ;
+; |COUNTER32B|CQI[14]~58      ; |COUNTER32B|CQI[14]~58      ; combout          ;
+; |COUNTER32B|CQI[14]~58      ; |COUNTER32B|CQI[14]~59      ; cout             ;
+; |COUNTER32B|CQI[15]~60      ; |COUNTER32B|CQI[15]~60      ; combout          ;
+; |COUNTER32B|CQI[15]~60      ; |COUNTER32B|CQI[15]~61      ; cout             ;
+; |COUNTER32B|CQI[16]~62      ; |COUNTER32B|CQI[16]~62      ; combout          ;
+; |COUNTER32B|CQI[16]~62      ; |COUNTER32B|CQI[16]~63      ; cout             ;
+; |COUNTER32B|CQI[17]~64      ; |COUNTER32B|CQI[17]~64      ; combout          ;
+; |COUNTER32B|CQI[17]~64      ; |COUNTER32B|CQI[17]~65      ; cout             ;
+; |COUNTER32B|CQI[18]~66      ; |COUNTER32B|CQI[18]~66      ; combout          ;
+; |COUNTER32B|CQI[18]~66      ; |COUNTER32B|CQI[18]~67      ; cout             ;
+; |COUNTER32B|CQI[19]~68      ; |COUNTER32B|CQI[19]~68      ; combout          ;
+; |COUNTER32B|CQI[19]~68      ; |COUNTER32B|CQI[19]~69      ; cout             ;
+; |COUNTER32B|CQI[20]~70      ; |COUNTER32B|CQI[20]~70      ; combout          ;
+; |COUNTER32B|CQI[20]~70      ; |COUNTER32B|CQI[20]~71      ; cout             ;
+; |COUNTER32B|CQI[21]~72      ; |COUNTER32B|CQI[21]~72      ; combout          ;
+; |COUNTER32B|CQI[21]~72      ; |COUNTER32B|CQI[21]~73      ; cout             ;
+; |COUNTER32B|CQI[22]~74      ; |COUNTER32B|CQI[22]~74      ; combout          ;
+; |COUNTER32B|CQI[22]~74      ; |COUNTER32B|CQI[22]~75      ; cout             ;
+; |COUNTER32B|CQI[23]~76      ; |COUNTER32B|CQI[23]~76      ; combout          ;
+; |COUNTER32B|CQI[23]~76      ; |COUNTER32B|CQI[23]~77      ; cout             ;
+; |COUNTER32B|CQI[24]~78      ; |COUNTER32B|CQI[24]~78      ; combout          ;
+; |COUNTER32B|CQI[24]~78      ; |COUNTER32B|CQI[24]~79      ; cout             ;
+; |COUNTER32B|CQI[25]~80      ; |COUNTER32B|CQI[25]~80      ; combout          ;
+; |COUNTER32B|CQI[25]~80      ; |COUNTER32B|CQI[25]~81      ; cout             ;
+; |COUNTER32B|CQI[26]~82      ; |COUNTER32B|CQI[26]~82      ; combout          ;
+; |COUNTER32B|CQI[26]~82      ; |COUNTER32B|CQI[26]~83      ; cout             ;
+; |COUNTER32B|CQI[27]~84      ; |COUNTER32B|CQI[27]~84      ; combout          ;
+; |COUNTER32B|CQI[27]~84      ; |COUNTER32B|CQI[27]~85      ; cout             ;
+; |COUNTER32B|CQI[28]~86      ; |COUNTER32B|CQI[28]~86      ; combout          ;
+; |COUNTER32B|CQI[28]~86      ; |COUNTER32B|CQI[28]~87      ; cout             ;
+; |COUNTER32B|CQI[29]~88      ; |COUNTER32B|CQI[29]~88      ; combout          ;
+; |COUNTER32B|CQI[29]~88      ; |COUNTER32B|CQI[29]~89      ; cout             ;
+; |COUNTER32B|CQI[30]~90      ; |COUNTER32B|CQI[30]~90      ; combout          ;
+; |COUNTER32B|CQI[30]~90      ; |COUNTER32B|CQI[30]~91      ; cout             ;
+; |COUNTER32B|CQI[31]~92      ; |COUNTER32B|CQI[31]~92      ; combout          ;
+; |COUNTER32B|DOUT[6]~output  ; |COUNTER32B|DOUT[6]~output  ; o                ;
+; |COUNTER32B|DOUT[6]         ; |COUNTER32B|DOUT[6]         ; padout           ;
+; |COUNTER32B|DOUT[7]~output  ; |COUNTER32B|DOUT[7]~output  ; o                ;
+; |COUNTER32B|DOUT[7]         ; |COUNTER32B|DOUT[7]         ; padout           ;
+; |COUNTER32B|DOUT[8]~output  ; |COUNTER32B|DOUT[8]~output  ; o                ;
+; |COUNTER32B|DOUT[8]         ; |COUNTER32B|DOUT[8]         ; padout           ;
+; |COUNTER32B|DOUT[9]~output  ; |COUNTER32B|DOUT[9]~output  ; o                ;
+; |COUNTER32B|DOUT[9]         ; |COUNTER32B|DOUT[9]         ; padout           ;
+; |COUNTER32B|DOUT[10]~output ; |COUNTER32B|DOUT[10]~output ; o                ;
+; |COUNTER32B|DOUT[10]        ; |COUNTER32B|DOUT[10]        ; padout           ;
+; |COUNTER32B|DOUT[11]~output ; |COUNTER32B|DOUT[11]~output ; o                ;
+; |COUNTER32B|DOUT[11]        ; |COUNTER32B|DOUT[11]        ; padout           ;
+; |COUNTER32B|DOUT[12]~output ; |COUNTER32B|DOUT[12]~output ; o                ;
+; |COUNTER32B|DOUT[12]        ; |COUNTER32B|DOUT[12]        ; padout           ;
+; |COUNTER32B|DOUT[13]~output ; |COUNTER32B|DOUT[13]~output ; o                ;
+; |COUNTER32B|DOUT[13]        ; |COUNTER32B|DOUT[13]        ; padout           ;
+; |COUNTER32B|DOUT[14]~output ; |COUNTER32B|DOUT[14]~output ; o                ;
+; |COUNTER32B|DOUT[14]        ; |COUNTER32B|DOUT[14]        ; padout           ;
+; |COUNTER32B|DOUT[15]~output ; |COUNTER32B|DOUT[15]~output ; o                ;
+; |COUNTER32B|DOUT[15]        ; |COUNTER32B|DOUT[15]        ; padout           ;
+; |COUNTER32B|DOUT[16]~output ; |COUNTER32B|DOUT[16]~output ; o                ;
+; |COUNTER32B|DOUT[16]        ; |COUNTER32B|DOUT[16]        ; padout           ;
+; |COUNTER32B|DOUT[17]~output ; |COUNTER32B|DOUT[17]~output ; o                ;
+; |COUNTER32B|DOUT[17]        ; |COUNTER32B|DOUT[17]        ; padout           ;
+; |COUNTER32B|DOUT[18]~output ; |COUNTER32B|DOUT[18]~output ; o                ;
+; |COUNTER32B|DOUT[18]        ; |COUNTER32B|DOUT[18]        ; padout           ;
+; |COUNTER32B|DOUT[19]~output ; |COUNTER32B|DOUT[19]~output ; o                ;
+; |COUNTER32B|DOUT[19]        ; |COUNTER32B|DOUT[19]        ; padout           ;
+; |COUNTER32B|DOUT[20]~output ; |COUNTER32B|DOUT[20]~output ; o                ;
+; |COUNTER32B|DOUT[20]        ; |COUNTER32B|DOUT[20]        ; padout           ;
+; |COUNTER32B|DOUT[21]~output ; |COUNTER32B|DOUT[21]~output ; o                ;
+; |COUNTER32B|DOUT[21]        ; |COUNTER32B|DOUT[21]        ; padout           ;
+; |COUNTER32B|DOUT[22]~output ; |COUNTER32B|DOUT[22]~output ; o                ;
+; |COUNTER32B|DOUT[22]        ; |COUNTER32B|DOUT[22]        ; padout           ;
+; |COUNTER32B|DOUT[23]~output ; |COUNTER32B|DOUT[23]~output ; o                ;
+; |COUNTER32B|DOUT[23]        ; |COUNTER32B|DOUT[23]        ; padout           ;
+; |COUNTER32B|DOUT[24]~output ; |COUNTER32B|DOUT[24]~output ; o                ;
+; |COUNTER32B|DOUT[24]        ; |COUNTER32B|DOUT[24]        ; padout           ;
+; |COUNTER32B|DOUT[25]~output ; |COUNTER32B|DOUT[25]~output ; o                ;
+; |COUNTER32B|DOUT[25]        ; |COUNTER32B|DOUT[25]        ; padout           ;
+; |COUNTER32B|DOUT[26]~output ; |COUNTER32B|DOUT[26]~output ; o                ;
+; |COUNTER32B|DOUT[26]        ; |COUNTER32B|DOUT[26]        ; padout           ;
+; |COUNTER32B|DOUT[27]~output ; |COUNTER32B|DOUT[27]~output ; o                ;
+; |COUNTER32B|DOUT[27]        ; |COUNTER32B|DOUT[27]        ; padout           ;
+; |COUNTER32B|DOUT[28]~output ; |COUNTER32B|DOUT[28]~output ; o                ;
+; |COUNTER32B|DOUT[28]        ; |COUNTER32B|DOUT[28]        ; padout           ;
+; |COUNTER32B|DOUT[29]~output ; |COUNTER32B|DOUT[29]~output ; o                ;
+; |COUNTER32B|DOUT[29]        ; |COUNTER32B|DOUT[29]        ; padout           ;
+; |COUNTER32B|DOUT[30]~output ; |COUNTER32B|DOUT[30]~output ; o                ;
+; |COUNTER32B|DOUT[30]        ; |COUNTER32B|DOUT[30]        ; padout           ;
+; |COUNTER32B|DOUT[31]~output ; |COUNTER32B|DOUT[31]~output ; o                ;
+; |COUNTER32B|DOUT[31]        ; |COUNTER32B|DOUT[31]        ; padout           ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |COUNTER32B|CQI[5]          ; |COUNTER32B|CQI[5]          ; q                ;
+; |COUNTER32B|CQI[6]          ; |COUNTER32B|CQI[6]          ; q                ;
+; |COUNTER32B|CQI[7]          ; |COUNTER32B|CQI[7]          ; q                ;
+; |COUNTER32B|CQI[8]          ; |COUNTER32B|CQI[8]          ; q                ;
+; |COUNTER32B|CQI[9]          ; |COUNTER32B|CQI[9]          ; q                ;
+; |COUNTER32B|CQI[10]         ; |COUNTER32B|CQI[10]         ; q                ;
+; |COUNTER32B|CQI[11]         ; |COUNTER32B|CQI[11]         ; q                ;
+; |COUNTER32B|CQI[12]         ; |COUNTER32B|CQI[12]         ; q                ;
+; |COUNTER32B|CQI[13]         ; |COUNTER32B|CQI[13]         ; q                ;
+; |COUNTER32B|CQI[14]         ; |COUNTER32B|CQI[14]         ; q                ;
+; |COUNTER32B|CQI[15]         ; |COUNTER32B|CQI[15]         ; q                ;
+; |COUNTER32B|CQI[16]         ; |COUNTER32B|CQI[16]         ; q                ;
+; |COUNTER32B|CQI[17]         ; |COUNTER32B|CQI[17]         ; q                ;
+; |COUNTER32B|CQI[18]         ; |COUNTER32B|CQI[18]         ; q                ;
+; |COUNTER32B|CQI[19]         ; |COUNTER32B|CQI[19]         ; q                ;
+; |COUNTER32B|CQI[20]         ; |COUNTER32B|CQI[20]         ; q                ;
+; |COUNTER32B|CQI[21]         ; |COUNTER32B|CQI[21]         ; q                ;
+; |COUNTER32B|CQI[22]         ; |COUNTER32B|CQI[22]         ; q                ;
+; |COUNTER32B|CQI[23]         ; |COUNTER32B|CQI[23]         ; q                ;
+; |COUNTER32B|CQI[24]         ; |COUNTER32B|CQI[24]         ; q                ;
+; |COUNTER32B|CQI[25]         ; |COUNTER32B|CQI[25]         ; q                ;
+; |COUNTER32B|CQI[26]         ; |COUNTER32B|CQI[26]         ; q                ;
+; |COUNTER32B|CQI[27]         ; |COUNTER32B|CQI[27]         ; q                ;
+; |COUNTER32B|CQI[28]         ; |COUNTER32B|CQI[28]         ; q                ;
+; |COUNTER32B|CQI[29]         ; |COUNTER32B|CQI[29]         ; q                ;
+; |COUNTER32B|CQI[30]         ; |COUNTER32B|CQI[30]         ; q                ;
+; |COUNTER32B|CQI[31]         ; |COUNTER32B|CQI[31]         ; q                ;
+; |COUNTER32B|CQI[6]~42       ; |COUNTER32B|CQI[6]~43       ; cout             ;
+; |COUNTER32B|CQI[7]~44       ; |COUNTER32B|CQI[7]~44       ; combout          ;
+; |COUNTER32B|CQI[7]~44       ; |COUNTER32B|CQI[7]~45       ; cout             ;
+; |COUNTER32B|CQI[8]~46       ; |COUNTER32B|CQI[8]~46       ; combout          ;
+; |COUNTER32B|CQI[8]~46       ; |COUNTER32B|CQI[8]~47       ; cout             ;
+; |COUNTER32B|CQI[9]~48       ; |COUNTER32B|CQI[9]~48       ; combout          ;
+; |COUNTER32B|CQI[9]~48       ; |COUNTER32B|CQI[9]~49       ; cout             ;
+; |COUNTER32B|CQI[10]~50      ; |COUNTER32B|CQI[10]~50      ; combout          ;
+; |COUNTER32B|CQI[10]~50      ; |COUNTER32B|CQI[10]~51      ; cout             ;
+; |COUNTER32B|CQI[11]~52      ; |COUNTER32B|CQI[11]~52      ; combout          ;
+; |COUNTER32B|CQI[11]~52      ; |COUNTER32B|CQI[11]~53      ; cout             ;
+; |COUNTER32B|CQI[12]~54      ; |COUNTER32B|CQI[12]~54      ; combout          ;
+; |COUNTER32B|CQI[12]~54      ; |COUNTER32B|CQI[12]~55      ; cout             ;
+; |COUNTER32B|CQI[13]~56      ; |COUNTER32B|CQI[13]~56      ; combout          ;
+; |COUNTER32B|CQI[13]~56      ; |COUNTER32B|CQI[13]~57      ; cout             ;
+; |COUNTER32B|CQI[14]~58      ; |COUNTER32B|CQI[14]~58      ; combout          ;
+; |COUNTER32B|CQI[14]~58      ; |COUNTER32B|CQI[14]~59      ; cout             ;
+; |COUNTER32B|CQI[15]~60      ; |COUNTER32B|CQI[15]~60      ; combout          ;
+; |COUNTER32B|CQI[15]~60      ; |COUNTER32B|CQI[15]~61      ; cout             ;
+; |COUNTER32B|CQI[16]~62      ; |COUNTER32B|CQI[16]~62      ; combout          ;
+; |COUNTER32B|CQI[16]~62      ; |COUNTER32B|CQI[16]~63      ; cout             ;
+; |COUNTER32B|CQI[17]~64      ; |COUNTER32B|CQI[17]~64      ; combout          ;
+; |COUNTER32B|CQI[17]~64      ; |COUNTER32B|CQI[17]~65      ; cout             ;
+; |COUNTER32B|CQI[18]~66      ; |COUNTER32B|CQI[18]~66      ; combout          ;
+; |COUNTER32B|CQI[18]~66      ; |COUNTER32B|CQI[18]~67      ; cout             ;
+; |COUNTER32B|CQI[19]~68      ; |COUNTER32B|CQI[19]~68      ; combout          ;
+; |COUNTER32B|CQI[19]~68      ; |COUNTER32B|CQI[19]~69      ; cout             ;
+; |COUNTER32B|CQI[20]~70      ; |COUNTER32B|CQI[20]~70      ; combout          ;
+; |COUNTER32B|CQI[20]~70      ; |COUNTER32B|CQI[20]~71      ; cout             ;
+; |COUNTER32B|CQI[21]~72      ; |COUNTER32B|CQI[21]~72      ; combout          ;
+; |COUNTER32B|CQI[21]~72      ; |COUNTER32B|CQI[21]~73      ; cout             ;
+; |COUNTER32B|CQI[22]~74      ; |COUNTER32B|CQI[22]~74      ; combout          ;
+; |COUNTER32B|CQI[22]~74      ; |COUNTER32B|CQI[22]~75      ; cout             ;
+; |COUNTER32B|CQI[23]~76      ; |COUNTER32B|CQI[23]~76      ; combout          ;
+; |COUNTER32B|CQI[23]~76      ; |COUNTER32B|CQI[23]~77      ; cout             ;
+; |COUNTER32B|CQI[24]~78      ; |COUNTER32B|CQI[24]~78      ; combout          ;
+; |COUNTER32B|CQI[24]~78      ; |COUNTER32B|CQI[24]~79      ; cout             ;
+; |COUNTER32B|CQI[25]~80      ; |COUNTER32B|CQI[25]~80      ; combout          ;
+; |COUNTER32B|CQI[25]~80      ; |COUNTER32B|CQI[25]~81      ; cout             ;
+; |COUNTER32B|CQI[26]~82      ; |COUNTER32B|CQI[26]~82      ; combout          ;
+; |COUNTER32B|CQI[26]~82      ; |COUNTER32B|CQI[26]~83      ; cout             ;
+; |COUNTER32B|CQI[27]~84      ; |COUNTER32B|CQI[27]~84      ; combout          ;
+; |COUNTER32B|CQI[27]~84      ; |COUNTER32B|CQI[27]~85      ; cout             ;
+; |COUNTER32B|CQI[28]~86      ; |COUNTER32B|CQI[28]~86      ; combout          ;
+; |COUNTER32B|CQI[28]~86      ; |COUNTER32B|CQI[28]~87      ; cout             ;
+; |COUNTER32B|CQI[29]~88      ; |COUNTER32B|CQI[29]~88      ; combout          ;
+; |COUNTER32B|CQI[29]~88      ; |COUNTER32B|CQI[29]~89      ; cout             ;
+; |COUNTER32B|CQI[30]~90      ; |COUNTER32B|CQI[30]~90      ; combout          ;
+; |COUNTER32B|CQI[30]~90      ; |COUNTER32B|CQI[30]~91      ; cout             ;
+; |COUNTER32B|CQI[31]~92      ; |COUNTER32B|CQI[31]~92      ; combout          ;
+; |COUNTER32B|DOUT[5]~output  ; |COUNTER32B|DOUT[5]~output  ; o                ;
+; |COUNTER32B|DOUT[5]         ; |COUNTER32B|DOUT[5]         ; padout           ;
+; |COUNTER32B|DOUT[6]~output  ; |COUNTER32B|DOUT[6]~output  ; o                ;
+; |COUNTER32B|DOUT[6]         ; |COUNTER32B|DOUT[6]         ; padout           ;
+; |COUNTER32B|DOUT[7]~output  ; |COUNTER32B|DOUT[7]~output  ; o                ;
+; |COUNTER32B|DOUT[7]         ; |COUNTER32B|DOUT[7]         ; padout           ;
+; |COUNTER32B|DOUT[8]~output  ; |COUNTER32B|DOUT[8]~output  ; o                ;
+; |COUNTER32B|DOUT[8]         ; |COUNTER32B|DOUT[8]         ; padout           ;
+; |COUNTER32B|DOUT[9]~output  ; |COUNTER32B|DOUT[9]~output  ; o                ;
+; |COUNTER32B|DOUT[9]         ; |COUNTER32B|DOUT[9]         ; padout           ;
+; |COUNTER32B|DOUT[10]~output ; |COUNTER32B|DOUT[10]~output ; o                ;
+; |COUNTER32B|DOUT[10]        ; |COUNTER32B|DOUT[10]        ; padout           ;
+; |COUNTER32B|DOUT[11]~output ; |COUNTER32B|DOUT[11]~output ; o                ;
+; |COUNTER32B|DOUT[11]        ; |COUNTER32B|DOUT[11]        ; padout           ;
+; |COUNTER32B|DOUT[12]~output ; |COUNTER32B|DOUT[12]~output ; o                ;
+; |COUNTER32B|DOUT[12]        ; |COUNTER32B|DOUT[12]        ; padout           ;
+; |COUNTER32B|DOUT[13]~output ; |COUNTER32B|DOUT[13]~output ; o                ;
+; |COUNTER32B|DOUT[13]        ; |COUNTER32B|DOUT[13]        ; padout           ;
+; |COUNTER32B|DOUT[14]~output ; |COUNTER32B|DOUT[14]~output ; o                ;
+; |COUNTER32B|DOUT[14]        ; |COUNTER32B|DOUT[14]        ; padout           ;
+; |COUNTER32B|DOUT[15]~output ; |COUNTER32B|DOUT[15]~output ; o                ;
+; |COUNTER32B|DOUT[15]        ; |COUNTER32B|DOUT[15]        ; padout           ;
+; |COUNTER32B|DOUT[16]~output ; |COUNTER32B|DOUT[16]~output ; o                ;
+; |COUNTER32B|DOUT[16]        ; |COUNTER32B|DOUT[16]        ; padout           ;
+; |COUNTER32B|DOUT[17]~output ; |COUNTER32B|DOUT[17]~output ; o                ;
+; |COUNTER32B|DOUT[17]        ; |COUNTER32B|DOUT[17]        ; padout           ;
+; |COUNTER32B|DOUT[18]~output ; |COUNTER32B|DOUT[18]~output ; o                ;
+; |COUNTER32B|DOUT[18]        ; |COUNTER32B|DOUT[18]        ; padout           ;
+; |COUNTER32B|DOUT[19]~output ; |COUNTER32B|DOUT[19]~output ; o                ;
+; |COUNTER32B|DOUT[19]        ; |COUNTER32B|DOUT[19]        ; padout           ;
+; |COUNTER32B|DOUT[20]~output ; |COUNTER32B|DOUT[20]~output ; o                ;
+; |COUNTER32B|DOUT[20]        ; |COUNTER32B|DOUT[20]        ; padout           ;
+; |COUNTER32B|DOUT[21]~output ; |COUNTER32B|DOUT[21]~output ; o                ;
+; |COUNTER32B|DOUT[21]        ; |COUNTER32B|DOUT[21]        ; padout           ;
+; |COUNTER32B|DOUT[22]~output ; |COUNTER32B|DOUT[22]~output ; o                ;
+; |COUNTER32B|DOUT[22]        ; |COUNTER32B|DOUT[22]        ; padout           ;
+; |COUNTER32B|DOUT[23]~output ; |COUNTER32B|DOUT[23]~output ; o                ;
+; |COUNTER32B|DOUT[23]        ; |COUNTER32B|DOUT[23]        ; padout           ;
+; |COUNTER32B|DOUT[24]~output ; |COUNTER32B|DOUT[24]~output ; o                ;
+; |COUNTER32B|DOUT[24]        ; |COUNTER32B|DOUT[24]        ; padout           ;
+; |COUNTER32B|DOUT[25]~output ; |COUNTER32B|DOUT[25]~output ; o                ;
+; |COUNTER32B|DOUT[25]        ; |COUNTER32B|DOUT[25]        ; padout           ;
+; |COUNTER32B|DOUT[26]~output ; |COUNTER32B|DOUT[26]~output ; o                ;
+; |COUNTER32B|DOUT[26]        ; |COUNTER32B|DOUT[26]        ; padout           ;
+; |COUNTER32B|DOUT[27]~output ; |COUNTER32B|DOUT[27]~output ; o                ;
+; |COUNTER32B|DOUT[27]        ; |COUNTER32B|DOUT[27]        ; padout           ;
+; |COUNTER32B|DOUT[28]~output ; |COUNTER32B|DOUT[28]~output ; o                ;
+; |COUNTER32B|DOUT[28]        ; |COUNTER32B|DOUT[28]        ; padout           ;
+; |COUNTER32B|DOUT[29]~output ; |COUNTER32B|DOUT[29]~output ; o                ;
+; |COUNTER32B|DOUT[29]        ; |COUNTER32B|DOUT[29]        ; padout           ;
+; |COUNTER32B|DOUT[30]~output ; |COUNTER32B|DOUT[30]~output ; o                ;
+; |COUNTER32B|DOUT[30]        ; |COUNTER32B|DOUT[30]        ; padout           ;
+; |COUNTER32B|DOUT[31]~output ; |COUNTER32B|DOUT[31]~output ; o                ;
+; |COUNTER32B|DOUT[31]        ; |COUNTER32B|DOUT[31]        ; padout           ;
+; |COUNTER32B|ENABL~input     ; |COUNTER32B|ENABL~input     ; o                ;
+; |COUNTER32B|ENABL           ; |COUNTER32B|ENABL           ; padout           ;
++-----------------------------+-----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Dec 08 19:19:53 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off COUNTER32B -c COUNTER32B
+Info: Using vector source file "D:/Documents/Desktop/EDA/EDA实验/EDA实验四/COUNTER32B/COUNTER32B.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of COUNTER32B.vwf called COUNTER32B.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      19.88 %
+Info: Number of transitions in simulation is 809
+Info: Vector file COUNTER32B.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Fri Dec 08 19:19:53 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

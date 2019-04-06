@@ -1,0 +1,14 @@
+
+State Machine - |zonghe|SCHK:inst|ST
+Name ST.s10 ST.s9 ST.s8 ST.s7 ST.s6 ST.s5 ST.s4 ST.s3 ST.s2 ST.s1 ST.s0 
+ST.s0 0 0 0 0 0 0 0 0 0 0 0 
+ST.s1 0 0 0 0 0 0 0 0 0 1 1 
+ST.s2 0 0 0 0 0 0 0 0 1 0 1 
+ST.s3 0 0 0 0 0 0 0 1 0 0 1 
+ST.s4 0 0 0 0 0 0 1 0 0 0 1 
+ST.s5 0 0 0 0 0 1 0 0 0 0 1 
+ST.s6 0 0 0 0 1 0 0 0 0 0 1 
+ST.s7 0 0 0 1 0 0 0 0 0 0 1 
+ST.s8 0 0 1 0 0 0 0 0 0 0 1 
+ST.s9 0 1 0 0 0 0 0 0 0 0 1 
+ST.s10 1 0 0 0 0 0 0 0 0 0 1 

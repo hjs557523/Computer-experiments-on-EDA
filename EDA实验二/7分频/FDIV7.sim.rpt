@@ -1,0 +1,190 @@
+Simulator report for FDIV7
+Fri Nov 10 18:05:50 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 26 nodes     ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 177          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16E144C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 26           ;
+; Total output ports checked                          ; 26           ;
+; Total output ports with complete 1/0-value coverage ; 26           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                          ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |FDIV7|M2               ; |FDIV7|M2               ; q                ;
+; |FDIV7|M1               ; |FDIV7|M1               ; q                ;
+; |FDIV7|K_OR~0           ; |FDIV7|K_OR~0           ; combout          ;
+; |FDIV7|C2[1]            ; |FDIV7|C2[1]            ; q                ;
+; |FDIV7|C2[2]            ; |FDIV7|C2[2]            ; q                ;
+; |FDIV7|C2[0]            ; |FDIV7|C2[0]            ; q                ;
+; |FDIV7|M2~0             ; |FDIV7|M2~0             ; combout          ;
+; |FDIV7|C1[1]            ; |FDIV7|C1[1]            ; q                ;
+; |FDIV7|C1[0]            ; |FDIV7|C1[0]            ; q                ;
+; |FDIV7|C1[2]            ; |FDIV7|C1[2]            ; q                ;
+; |FDIV7|M1~0             ; |FDIV7|M1~0             ; combout          ;
+; |FDIV7|C2~0             ; |FDIV7|C2~0             ; combout          ;
+; |FDIV7|C2~1             ; |FDIV7|C2~1             ; combout          ;
+; |FDIV7|C2~2             ; |FDIV7|C2~2             ; combout          ;
+; |FDIV7|C1~0             ; |FDIV7|C1~0             ; combout          ;
+; |FDIV7|C1~1             ; |FDIV7|C1~1             ; combout          ;
+; |FDIV7|C1~2             ; |FDIV7|C1~2             ; combout          ;
+; |FDIV7|K_OR~output      ; |FDIV7|K_OR~output      ; o                ;
+; |FDIV7|K_OR             ; |FDIV7|K_OR             ; padout           ;
+; |FDIV7|K1~output        ; |FDIV7|K1~output        ; o                ;
+; |FDIV7|K1               ; |FDIV7|K1               ; padout           ;
+; |FDIV7|K2~output        ; |FDIV7|K2~output        ; o                ;
+; |FDIV7|K2               ; |FDIV7|K2               ; padout           ;
+; |FDIV7|CLK~input        ; |FDIV7|CLK~input        ; o                ;
+; |FDIV7|CLK              ; |FDIV7|CLK              ; padout           ;
+; |FDIV7|CLK~inputclkctrl ; |FDIV7|CLK~inputclkctrl ; outclk           ;
++-------------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 10 18:05:49 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FDIV7 -c FDIV7
+Info: Using vector source file "D:/Documents/Desktop/EDA/EDA实验/EDA实验二/7分频/FDIV7.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of FDIV7.vwf called FDIV7.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 177
+Info: Vector file FDIV7.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Fri Nov 10 18:05:50 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

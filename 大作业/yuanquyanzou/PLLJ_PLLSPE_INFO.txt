@@ -1,0 +1,5 @@
+PLL_Name	PLL20:inst|altpll:altpll_component|PLL20_altpll:auto_generated|pll1
+PLLJITTER	38
+PLLSPEmax	84
+PLLSPEmin	-53
+

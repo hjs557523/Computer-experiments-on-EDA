@@ -1,0 +1,17 @@
+module FREQTEST(CLK1HZ, FSIN, DOUT);
+   input         CLK1HZ;
+   input         FSIN;
+   output [31:0] DOUT;
+   wire          TSTEN1;
+   wire          CLR_CNT1;
+   wire          Load1;
+   wire [31:0]   DTO1;
+   wire [6:0]    CARRY_OUT1;
+   
+   FTCTRL U1(.clkk(CLK1HZ), .cnt_en(TSTEN1), .rst_cnt(CLR_CNT1), .load(Load1));
+
+   REG32B U2(.lk(Load1), .din(DTO1), .dout(DOUT));
+ 
+   COUNTER32B U3(.FIN(FSIN), .CLR(CLR_CNT1), .ENABL(TSTEN1), .DOUT(DTO1));
+
+endmodule  

@@ -1,0 +1,105 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+10
+3666
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SCHK
+# storage
+db|SCHK.(0).cnf
+db|SCHK.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+schk.v
+3eda28bd644c5aaf2bb64f0303a7bc7
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+s0
+40
+PARAMETER_SIGNED_DEC
+DEF
+s1
+41
+PARAMETER_SIGNED_DEC
+DEF
+s2
+42
+PARAMETER_SIGNED_DEC
+DEF
+s3
+43
+PARAMETER_SIGNED_DEC
+DEF
+s4
+44
+PARAMETER_SIGNED_DEC
+DEF
+s5
+45
+PARAMETER_SIGNED_DEC
+DEF
+s6
+46
+PARAMETER_SIGNED_DEC
+DEF
+s7
+47
+PARAMETER_SIGNED_DEC
+DEF
+s8
+48
+PARAMETER_SIGNED_DEC
+DEF
+s9
+49
+PARAMETER_SIGNED_DEC
+DEF
+s10
+50
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

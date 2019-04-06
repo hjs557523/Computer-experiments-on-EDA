@@ -1,0 +1,272 @@
+Simulator report for BCDma
+Sat Oct 21 09:43:44 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 69 nodes     ;
+; Simulation Coverage         ;      57.14 % ;
+; Total Number of Transitions ; 429          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C10E144C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      57.14 % ;
+; Total nodes checked                                 ; 69           ;
+; Total output ports checked                          ; 77           ;
+; Total output ports with complete 1/0-value coverage ; 44           ;
+; Total output ports with no 1/0-value coverage       ; 29           ;
+; Total output ports with no 1-value coverage         ; 29           ;
+; Total output ports with no 0-value coverage         ; 33           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |BCDma|Add2~0      ; |BCDma|Add2~0      ; combout          ;
+; |BCDma|Add2~0      ; |BCDma|Add2~1      ; cout             ;
+; |BCDma|DT0[1]~0    ; |BCDma|DT0[1]~0    ; combout          ;
+; |BCDma|DT0[1]~0    ; |BCDma|DT0[1]~1    ; cout             ;
+; |BCDma|DT0[2]~2    ; |BCDma|DT0[2]~2    ; combout          ;
+; |BCDma|DT0[2]~2    ; |BCDma|DT0[2]~3    ; cout             ;
+; |BCDma|DT0[3]~4    ; |BCDma|DT0[3]~4    ; combout          ;
+; |BCDma|DT0[3]~4    ; |BCDma|DT0[3]~5    ; cout             ;
+; |BCDma|Add2~2      ; |BCDma|Add2~2      ; combout          ;
+; |BCDma|Add3~1      ; |BCDma|Add3~1      ; cout             ;
+; |BCDma|Add3~2      ; |BCDma|Add3~2      ; combout          ;
+; |BCDma|Add3~2      ; |BCDma|Add3~3      ; cout             ;
+; |BCDma|Add3~4      ; |BCDma|Add3~4      ; combout          ;
+; |BCDma|D~0         ; |BCDma|D~0         ; combout          ;
+; |BCDma|D~1         ; |BCDma|D~1         ; combout          ;
+; |BCDma|D~2         ; |BCDma|D~2         ; combout          ;
+; |BCDma|LessThan0~0 ; |BCDma|LessThan0~0 ; combout          ;
+; |BCDma|D~3         ; |BCDma|D~3         ; combout          ;
+; |BCDma|D[0]~output ; |BCDma|D[0]~output ; o                ;
+; |BCDma|D[0]        ; |BCDma|D[0]        ; padout           ;
+; |BCDma|D[1]~output ; |BCDma|D[1]~output ; o                ;
+; |BCDma|D[1]        ; |BCDma|D[1]        ; padout           ;
+; |BCDma|D[2]~output ; |BCDma|D[2]~output ; o                ;
+; |BCDma|D[2]        ; |BCDma|D[2]        ; padout           ;
+; |BCDma|D[3]~output ; |BCDma|D[3]~output ; o                ;
+; |BCDma|D[3]        ; |BCDma|D[3]        ; padout           ;
+; |BCDma|D[4]~output ; |BCDma|D[4]~output ; o                ;
+; |BCDma|D[4]        ; |BCDma|D[4]        ; padout           ;
+; |BCDma|D[5]~output ; |BCDma|D[5]~output ; o                ;
+; |BCDma|D[5]        ; |BCDma|D[5]        ; padout           ;
+; |BCDma|B[0]~input  ; |BCDma|B[0]~input  ; o                ;
+; |BCDma|B[0]        ; |BCDma|B[0]        ; padout           ;
+; |BCDma|A[0]~input  ; |BCDma|A[0]~input  ; o                ;
+; |BCDma|A[0]        ; |BCDma|A[0]        ; padout           ;
+; |BCDma|B[1]~input  ; |BCDma|B[1]~input  ; o                ;
+; |BCDma|B[1]        ; |BCDma|B[1]        ; padout           ;
+; |BCDma|A[1]~input  ; |BCDma|A[1]~input  ; o                ;
+; |BCDma|A[1]        ; |BCDma|A[1]        ; padout           ;
+; |BCDma|B[3]~input  ; |BCDma|B[3]~input  ; o                ;
+; |BCDma|B[3]        ; |BCDma|B[3]        ; padout           ;
+; |BCDma|B[2]~input  ; |BCDma|B[2]~input  ; o                ;
+; |BCDma|B[2]        ; |BCDma|B[2]        ; padout           ;
+; |BCDma|A[2]~input  ; |BCDma|A[2]~input  ; o                ;
+; |BCDma|A[2]        ; |BCDma|A[2]        ; padout           ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------+
+; Missing 1-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |BCDma|Add3~4      ; |BCDma|Add3~5      ; cout             ;
+; |BCDma|Add3~6      ; |BCDma|Add3~6      ; combout          ;
+; |BCDma|Add3~6      ; |BCDma|Add3~7      ; cout             ;
+; |BCDma|Add3~8      ; |BCDma|Add3~8      ; combout          ;
+; |BCDma|Add3~8      ; |BCDma|Add3~9      ; cout             ;
+; |BCDma|Add3~10     ; |BCDma|Add3~10     ; combout          ;
+; |BCDma|D~4         ; |BCDma|D~4         ; combout          ;
+; |BCDma|D~5         ; |BCDma|D~5         ; combout          ;
+; |BCDma|LessThan1~0 ; |BCDma|LessThan1~0 ; combout          ;
+; |BCDma|D[6]~output ; |BCDma|D[6]~output ; o                ;
+; |BCDma|D[6]        ; |BCDma|D[6]        ; padout           ;
+; |BCDma|D[7]~output ; |BCDma|D[7]~output ; o                ;
+; |BCDma|D[7]        ; |BCDma|D[7]        ; padout           ;
+; |BCDma|D[8]~output ; |BCDma|D[8]~output ; o                ;
+; |BCDma|D[8]        ; |BCDma|D[8]        ; padout           ;
+; |BCDma|A[4]~input  ; |BCDma|A[4]~input  ; o                ;
+; |BCDma|A[4]        ; |BCDma|A[4]        ; padout           ;
+; |BCDma|B[5]~input  ; |BCDma|B[5]~input  ; o                ;
+; |BCDma|B[5]        ; |BCDma|B[5]        ; padout           ;
+; |BCDma|A[5]~input  ; |BCDma|A[5]~input  ; o                ;
+; |BCDma|A[5]        ; |BCDma|A[5]        ; padout           ;
+; |BCDma|B[7]~input  ; |BCDma|B[7]~input  ; o                ;
+; |BCDma|B[7]        ; |BCDma|B[7]        ; padout           ;
+; |BCDma|A[7]~input  ; |BCDma|A[7]~input  ; o                ;
+; |BCDma|A[7]        ; |BCDma|A[7]        ; padout           ;
+; |BCDma|B[6]~input  ; |BCDma|B[6]~input  ; o                ;
+; |BCDma|B[6]        ; |BCDma|B[6]        ; padout           ;
+; |BCDma|A[6]~input  ; |BCDma|A[6]~input  ; o                ;
+; |BCDma|A[6]        ; |BCDma|A[6]        ; padout           ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |BCDma|Add3~4      ; |BCDma|Add3~5      ; cout             ;
+; |BCDma|Add3~6      ; |BCDma|Add3~6      ; combout          ;
+; |BCDma|Add3~6      ; |BCDma|Add3~7      ; cout             ;
+; |BCDma|Add3~8      ; |BCDma|Add3~8      ; combout          ;
+; |BCDma|Add3~8      ; |BCDma|Add3~9      ; cout             ;
+; |BCDma|Add3~10     ; |BCDma|Add3~10     ; combout          ;
+; |BCDma|D~4         ; |BCDma|D~4         ; combout          ;
+; |BCDma|D~5         ; |BCDma|D~5         ; combout          ;
+; |BCDma|LessThan1~0 ; |BCDma|LessThan1~0 ; combout          ;
+; |BCDma|D[6]~output ; |BCDma|D[6]~output ; o                ;
+; |BCDma|D[6]        ; |BCDma|D[6]        ; padout           ;
+; |BCDma|D[7]~output ; |BCDma|D[7]~output ; o                ;
+; |BCDma|D[7]        ; |BCDma|D[7]        ; padout           ;
+; |BCDma|D[8]~output ; |BCDma|D[8]~output ; o                ;
+; |BCDma|D[8]        ; |BCDma|D[8]        ; padout           ;
+; |BCDma|A[3]~input  ; |BCDma|A[3]~input  ; o                ;
+; |BCDma|A[3]        ; |BCDma|A[3]        ; padout           ;
+; |BCDma|B[4]~input  ; |BCDma|B[4]~input  ; o                ;
+; |BCDma|B[4]        ; |BCDma|B[4]        ; padout           ;
+; |BCDma|A[4]~input  ; |BCDma|A[4]~input  ; o                ;
+; |BCDma|A[4]        ; |BCDma|A[4]        ; padout           ;
+; |BCDma|B[5]~input  ; |BCDma|B[5]~input  ; o                ;
+; |BCDma|B[5]        ; |BCDma|B[5]        ; padout           ;
+; |BCDma|A[5]~input  ; |BCDma|A[5]~input  ; o                ;
+; |BCDma|A[5]        ; |BCDma|A[5]        ; padout           ;
+; |BCDma|B[7]~input  ; |BCDma|B[7]~input  ; o                ;
+; |BCDma|B[7]        ; |BCDma|B[7]        ; padout           ;
+; |BCDma|A[7]~input  ; |BCDma|A[7]~input  ; o                ;
+; |BCDma|A[7]        ; |BCDma|A[7]        ; padout           ;
+; |BCDma|B[6]~input  ; |BCDma|B[6]~input  ; o                ;
+; |BCDma|B[6]        ; |BCDma|B[6]        ; padout           ;
+; |BCDma|A[6]~input  ; |BCDma|A[6]~input  ; o                ;
+; |BCDma|A[6]        ; |BCDma|A[6]        ; padout           ;
++--------------------+--------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Oct 21 09:43:44 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off BCDma -c BCDma
+Info: Using vector source file "D:/Documents/Desktop/EDA/EDAÊµÑé/BCDÂë/BCDma.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of BCDma.vwf called BCDma.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      57.14 %
+Info: Number of transitions in simulation is 429
+Info: Vector file BCDma.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Sat Oct 21 09:43:44 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

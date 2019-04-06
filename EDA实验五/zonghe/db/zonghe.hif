@@ -1,0 +1,161 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+10
+3666
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SCHK
+# storage
+db|zonghe.(1).cnf
+db|zonghe.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+schk.v
+3eda28bd644c5aaf2bb64f0303a7bc7
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+s0
+40
+PARAMETER_SIGNED_DEC
+USR
+s1
+41
+PARAMETER_SIGNED_DEC
+USR
+s2
+42
+PARAMETER_SIGNED_DEC
+USR
+s3
+43
+PARAMETER_SIGNED_DEC
+USR
+s4
+44
+PARAMETER_SIGNED_DEC
+USR
+s5
+45
+PARAMETER_SIGNED_DEC
+USR
+s6
+46
+PARAMETER_SIGNED_DEC
+USR
+s7
+47
+PARAMETER_SIGNED_DEC
+USR
+s8
+48
+PARAMETER_SIGNED_DEC
+USR
+s9
+49
+PARAMETER_SIGNED_DEC
+USR
+s10
+50
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+SCHK:inst
+}
+# macro_sequence
+
+# end
+# entity
+zuoyi
+# storage
+db|zonghe.(2).cnf
+db|zonghe.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+zuoyi.v
+814ee3f089f5c776932767803e1a6c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+zuoyi:inst1
+}
+# macro_sequence
+
+# end
+# entity
+zonghe
+# storage
+db|zonghe.(0).cnf
+db|zonghe.(0).cnf
+# case_insensitive
+# source_file
+zonghe.bdf
+fb9ae8b46ba747436aaae8b14c868f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

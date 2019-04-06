@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FSIN'
+Slack : -3.273
+TNS   : -70.427
+
+Type  : Slow 1200mV 85C Model Setup 'CLK1HZ'
+Slack : 0.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK1HZ'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FSIN'
+Slack : 0.740
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FSIN'
+Slack : -2.626
+TNS   : -74.735
+
+Type  : Slow 1200mV 85C Model Removal 'FSIN'
+Slack : 1.088
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSIN'
+Slack : -3.000
+TNS   : -50.584
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK1HZ'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 0C Model Setup 'FSIN'
+Slack : -2.822
+TNS   : -61.574
+
+Type  : Slow 1200mV 0C Model Setup 'CLK1HZ'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK1HZ'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FSIN'
+Slack : 0.685
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FSIN'
+Slack : -2.461
+TNS   : -70.107
+
+Type  : Slow 1200mV 0C Model Removal 'FSIN'
+Slack : 1.108
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSIN'
+Slack : -3.000
+TNS   : -50.584
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK1HZ'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Fast 1200mV 0C Model Setup 'FSIN'
+Slack : -0.895
+TNS   : -12.168
+
+Type  : Fast 1200mV 0C Model Setup 'CLK1HZ'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK1HZ'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FSIN'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FSIN'
+Slack : -0.779
+TNS   : -21.372
+
+Type  : Fast 1200mV 0C Model Removal 'FSIN'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSIN'
+Slack : -3.000
+TNS   : -36.951
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK1HZ'
+Slack : -3.000
+TNS   : -4.139
+
+------------------------------------------------------------

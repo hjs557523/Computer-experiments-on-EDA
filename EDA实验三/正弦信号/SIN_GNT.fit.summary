@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Nov 24 18:30:36 2017
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : SIN_GNT
+Top-level Entity Name : SIN_GNT
+Family : Cyclone III
+Device : EP3C10E144C8
+Timing Models : Final
+Total logic elements : 784 / 10,320 ( 8 % )
+    Total combinational functions : 521 / 10,320 ( 5 % )
+    Dedicated logic registers : 622 / 10,320 ( 6 % )
+Total registers : 622
+Total pins : 20 / 95 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 62,464 / 423,936 ( 15 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

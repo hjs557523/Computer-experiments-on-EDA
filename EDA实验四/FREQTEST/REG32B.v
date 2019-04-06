@@ -1,0 +1,8 @@
+module REG32B(LK,DIN,DOUT);
+input         LK;
+input [31:0]  DIN;
+output [31:0] DOUT;
+reg [31:0]    DOUT;
+always@(posedge LK or posedge DIN)
+DOUT<=DIN;
+endmodule

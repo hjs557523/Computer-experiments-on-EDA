@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.457 ns
+From           : COUNTER32B:inst7|CQI[7]
+To             : DOUT[7]
+From Clock     : FIN
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.765 ns
+From           : CLKK
+To             : RST_CNT
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 425.53 MHz ( period = 2.350 ns )
+From           : COUNTER32B:inst7|CQI[0]
+To             : COUNTER32B:inst7|CQI[31]
+From Clock     : FIN
+To Clock       : FIN
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLKK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : FTCTRL:inst|Div2CLK
+To             : FTCTRL:inst|Div2CLK
+From Clock     : CLKK
+To Clock       : CLKK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

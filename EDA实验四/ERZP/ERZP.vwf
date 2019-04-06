@@ -1,0 +1,163 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 100000.0;
+	SIMULATION_TIME = 100000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("CLK")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("KIN")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("KOUT")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("CLK")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 100;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+		}
+	}
+}
+
+TRANSITION_LIST("KIN")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 500.0;
+		LEVEL 0 FOR 3000.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 620.0;
+		LEVEL 1 FOR 880.0;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 500.0;
+		LEVEL 0 FOR 1500.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1520.0;
+		LEVEL 1 FOR 480.0;
+		LEVEL 0 FOR 1500.0;
+		LEVEL 1 FOR 8500.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 540.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 680.0;
+		LEVEL 0 FOR 600.0;
+		LEVEL 1 FOR 900.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 1160.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 1060.0;
+		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 9500.0;
+		LEVEL 1 FOR 13040.0;
+		LEVEL 0 FOR 13960.0;
+		LEVEL 1 FOR 15000.0;
+		LEVEL 0 FOR 11500.0;
+		LEVEL 1 FOR 4500.0;
+	}
+}
+
+TRANSITION_LIST("KOUT")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 55506.109;
+		LEVEL 1 FOR 7999.932;
+		LEVEL 0 FOR 19000.068;
+		LEVEL 1 FOR 9999.932;
+		LEVEL 0 FOR 7493.959;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CLK";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "KIN";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "KOUT";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 27900;
+	MASTER = TRUE;
+}
+;

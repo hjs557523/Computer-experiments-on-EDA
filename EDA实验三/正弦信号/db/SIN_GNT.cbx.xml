@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SIN_GNT">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_4uf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter" CBX_FILE_NAME="cntr_p1j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|ROM78:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pub1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_krc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_5fi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter" CBX_FILE_NAME="cntr_d8j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|CNT7B:inst2|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_d9j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_kvs3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter" CBX_FILE_NAME="cntr_7fi.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

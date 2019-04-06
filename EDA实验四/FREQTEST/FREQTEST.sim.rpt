@@ -1,0 +1,493 @@
+Simulator report for FREQTEST
+Fri Dec 08 16:19:41 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 137 nodes    ;
+; Simulation Coverage         ;       4.19 % ;
+; Total Number of Transitions ; 698          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C10E144C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       4.19 % ;
+; Total nodes checked                                 ; 137          ;
+; Total output ports checked                          ; 167          ;
+; Total output ports with complete 1/0-value coverage ; 7            ;
+; Total output ports with no 1/0-value coverage       ; 160          ;
+; Total output ports with no 1-value coverage         ; 160          ;
+; Total output ports with no 0-value coverage         ; 160          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                      ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |FREQTEST|FTCTRL:U1|Div2CLK           ; |FREQTEST|FTCTRL:U1|Div2CLK           ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[0]~31     ; |FREQTEST|COUNTER32B:U3|CQI[0]~31     ; combout          ;
+; |FREQTEST|FTCTRL:U1|RST_CNT           ; |FREQTEST|FTCTRL:U1|RST_CNT           ; combout          ;
+; |FREQTEST|FTCTRL:U1|Div2CLK~0         ; |FREQTEST|FTCTRL:U1|Div2CLK~0         ; combout          ;
+; |FREQTEST|CLK1HZ~input                ; |FREQTEST|CLK1HZ~input                ; o                ;
+; |FREQTEST|CLK1HZ                      ; |FREQTEST|CLK1HZ                      ; padout           ;
+; |FREQTEST|COUNTER32B:U3|CQI[0]~feeder ; |FREQTEST|COUNTER32B:U3|CQI[0]~feeder ; combout          ;
++---------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |FREQTEST|COUNTER32B:U3|CQI[1]     ; |FREQTEST|COUNTER32B:U3|CQI[1]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[2]     ; |FREQTEST|COUNTER32B:U3|CQI[2]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[3]     ; |FREQTEST|COUNTER32B:U3|CQI[3]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[4]     ; |FREQTEST|COUNTER32B:U3|CQI[4]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[5]     ; |FREQTEST|COUNTER32B:U3|CQI[5]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[6]     ; |FREQTEST|COUNTER32B:U3|CQI[6]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[7]     ; |FREQTEST|COUNTER32B:U3|CQI[7]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[8]     ; |FREQTEST|COUNTER32B:U3|CQI[8]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[9]     ; |FREQTEST|COUNTER32B:U3|CQI[9]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[10]    ; |FREQTEST|COUNTER32B:U3|CQI[10]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[11]    ; |FREQTEST|COUNTER32B:U3|CQI[11]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[12]    ; |FREQTEST|COUNTER32B:U3|CQI[12]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[13]    ; |FREQTEST|COUNTER32B:U3|CQI[13]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[14]    ; |FREQTEST|COUNTER32B:U3|CQI[14]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[15]    ; |FREQTEST|COUNTER32B:U3|CQI[15]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[16]    ; |FREQTEST|COUNTER32B:U3|CQI[16]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[17]    ; |FREQTEST|COUNTER32B:U3|CQI[17]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[18]    ; |FREQTEST|COUNTER32B:U3|CQI[18]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[19]    ; |FREQTEST|COUNTER32B:U3|CQI[19]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[20]    ; |FREQTEST|COUNTER32B:U3|CQI[20]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[21]    ; |FREQTEST|COUNTER32B:U3|CQI[21]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[22]    ; |FREQTEST|COUNTER32B:U3|CQI[22]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[23]    ; |FREQTEST|COUNTER32B:U3|CQI[23]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[24]    ; |FREQTEST|COUNTER32B:U3|CQI[24]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[25]    ; |FREQTEST|COUNTER32B:U3|CQI[25]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[26]    ; |FREQTEST|COUNTER32B:U3|CQI[26]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[27]    ; |FREQTEST|COUNTER32B:U3|CQI[27]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[28]    ; |FREQTEST|COUNTER32B:U3|CQI[28]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[29]    ; |FREQTEST|COUNTER32B:U3|CQI[29]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[30]    ; |FREQTEST|COUNTER32B:U3|CQI[30]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[31]    ; |FREQTEST|COUNTER32B:U3|CQI[31]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[1]~32  ; |FREQTEST|COUNTER32B:U3|CQI[1]~32  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[1]~32  ; |FREQTEST|COUNTER32B:U3|CQI[1]~33  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[2]~34  ; |FREQTEST|COUNTER32B:U3|CQI[2]~34  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[2]~34  ; |FREQTEST|COUNTER32B:U3|CQI[2]~35  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[3]~36  ; |FREQTEST|COUNTER32B:U3|CQI[3]~36  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[3]~36  ; |FREQTEST|COUNTER32B:U3|CQI[3]~37  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[4]~38  ; |FREQTEST|COUNTER32B:U3|CQI[4]~38  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[4]~38  ; |FREQTEST|COUNTER32B:U3|CQI[4]~39  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[5]~40  ; |FREQTEST|COUNTER32B:U3|CQI[5]~40  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[5]~40  ; |FREQTEST|COUNTER32B:U3|CQI[5]~41  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[6]~42  ; |FREQTEST|COUNTER32B:U3|CQI[6]~42  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[6]~42  ; |FREQTEST|COUNTER32B:U3|CQI[6]~43  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[7]~44  ; |FREQTEST|COUNTER32B:U3|CQI[7]~44  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[7]~44  ; |FREQTEST|COUNTER32B:U3|CQI[7]~45  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[8]~46  ; |FREQTEST|COUNTER32B:U3|CQI[8]~46  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[8]~46  ; |FREQTEST|COUNTER32B:U3|CQI[8]~47  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[9]~48  ; |FREQTEST|COUNTER32B:U3|CQI[9]~48  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[9]~48  ; |FREQTEST|COUNTER32B:U3|CQI[9]~49  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[10]~50 ; |FREQTEST|COUNTER32B:U3|CQI[10]~50 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[10]~50 ; |FREQTEST|COUNTER32B:U3|CQI[10]~51 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[11]~52 ; |FREQTEST|COUNTER32B:U3|CQI[11]~52 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[11]~52 ; |FREQTEST|COUNTER32B:U3|CQI[11]~53 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[12]~54 ; |FREQTEST|COUNTER32B:U3|CQI[12]~54 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[12]~54 ; |FREQTEST|COUNTER32B:U3|CQI[12]~55 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[13]~56 ; |FREQTEST|COUNTER32B:U3|CQI[13]~56 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[13]~56 ; |FREQTEST|COUNTER32B:U3|CQI[13]~57 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[14]~58 ; |FREQTEST|COUNTER32B:U3|CQI[14]~58 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[14]~58 ; |FREQTEST|COUNTER32B:U3|CQI[14]~59 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[15]~60 ; |FREQTEST|COUNTER32B:U3|CQI[15]~60 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[15]~60 ; |FREQTEST|COUNTER32B:U3|CQI[15]~61 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[16]~62 ; |FREQTEST|COUNTER32B:U3|CQI[16]~62 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[16]~62 ; |FREQTEST|COUNTER32B:U3|CQI[16]~63 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[17]~64 ; |FREQTEST|COUNTER32B:U3|CQI[17]~64 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[17]~64 ; |FREQTEST|COUNTER32B:U3|CQI[17]~65 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[18]~66 ; |FREQTEST|COUNTER32B:U3|CQI[18]~66 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[18]~66 ; |FREQTEST|COUNTER32B:U3|CQI[18]~67 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[19]~68 ; |FREQTEST|COUNTER32B:U3|CQI[19]~68 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[19]~68 ; |FREQTEST|COUNTER32B:U3|CQI[19]~69 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[20]~70 ; |FREQTEST|COUNTER32B:U3|CQI[20]~70 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[20]~70 ; |FREQTEST|COUNTER32B:U3|CQI[20]~71 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[21]~72 ; |FREQTEST|COUNTER32B:U3|CQI[21]~72 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[21]~72 ; |FREQTEST|COUNTER32B:U3|CQI[21]~73 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[22]~74 ; |FREQTEST|COUNTER32B:U3|CQI[22]~74 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[22]~74 ; |FREQTEST|COUNTER32B:U3|CQI[22]~75 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[23]~76 ; |FREQTEST|COUNTER32B:U3|CQI[23]~76 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[23]~76 ; |FREQTEST|COUNTER32B:U3|CQI[23]~77 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[24]~78 ; |FREQTEST|COUNTER32B:U3|CQI[24]~78 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[24]~78 ; |FREQTEST|COUNTER32B:U3|CQI[24]~79 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[25]~80 ; |FREQTEST|COUNTER32B:U3|CQI[25]~80 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[25]~80 ; |FREQTEST|COUNTER32B:U3|CQI[25]~81 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[26]~82 ; |FREQTEST|COUNTER32B:U3|CQI[26]~82 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[26]~82 ; |FREQTEST|COUNTER32B:U3|CQI[26]~83 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[27]~84 ; |FREQTEST|COUNTER32B:U3|CQI[27]~84 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[27]~84 ; |FREQTEST|COUNTER32B:U3|CQI[27]~85 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[28]~86 ; |FREQTEST|COUNTER32B:U3|CQI[28]~86 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[28]~86 ; |FREQTEST|COUNTER32B:U3|CQI[28]~87 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[29]~88 ; |FREQTEST|COUNTER32B:U3|CQI[29]~88 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[29]~88 ; |FREQTEST|COUNTER32B:U3|CQI[29]~89 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[30]~90 ; |FREQTEST|COUNTER32B:U3|CQI[30]~90 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[30]~90 ; |FREQTEST|COUNTER32B:U3|CQI[30]~91 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[31]~92 ; |FREQTEST|COUNTER32B:U3|CQI[31]~92 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[0]     ; |FREQTEST|COUNTER32B:U3|CQI[0]     ; q                ;
+; |FREQTEST|DOUT[0]~output           ; |FREQTEST|DOUT[0]~output           ; o                ;
+; |FREQTEST|DOUT[0]                  ; |FREQTEST|DOUT[0]                  ; padout           ;
+; |FREQTEST|DOUT[1]~output           ; |FREQTEST|DOUT[1]~output           ; o                ;
+; |FREQTEST|DOUT[1]                  ; |FREQTEST|DOUT[1]                  ; padout           ;
+; |FREQTEST|DOUT[2]~output           ; |FREQTEST|DOUT[2]~output           ; o                ;
+; |FREQTEST|DOUT[2]                  ; |FREQTEST|DOUT[2]                  ; padout           ;
+; |FREQTEST|DOUT[3]~output           ; |FREQTEST|DOUT[3]~output           ; o                ;
+; |FREQTEST|DOUT[3]                  ; |FREQTEST|DOUT[3]                  ; padout           ;
+; |FREQTEST|DOUT[4]~output           ; |FREQTEST|DOUT[4]~output           ; o                ;
+; |FREQTEST|DOUT[4]                  ; |FREQTEST|DOUT[4]                  ; padout           ;
+; |FREQTEST|DOUT[5]~output           ; |FREQTEST|DOUT[5]~output           ; o                ;
+; |FREQTEST|DOUT[5]                  ; |FREQTEST|DOUT[5]                  ; padout           ;
+; |FREQTEST|DOUT[6]~output           ; |FREQTEST|DOUT[6]~output           ; o                ;
+; |FREQTEST|DOUT[6]                  ; |FREQTEST|DOUT[6]                  ; padout           ;
+; |FREQTEST|DOUT[7]~output           ; |FREQTEST|DOUT[7]~output           ; o                ;
+; |FREQTEST|DOUT[7]                  ; |FREQTEST|DOUT[7]                  ; padout           ;
+; |FREQTEST|DOUT[8]~output           ; |FREQTEST|DOUT[8]~output           ; o                ;
+; |FREQTEST|DOUT[8]                  ; |FREQTEST|DOUT[8]                  ; padout           ;
+; |FREQTEST|DOUT[9]~output           ; |FREQTEST|DOUT[9]~output           ; o                ;
+; |FREQTEST|DOUT[9]                  ; |FREQTEST|DOUT[9]                  ; padout           ;
+; |FREQTEST|DOUT[10]~output          ; |FREQTEST|DOUT[10]~output          ; o                ;
+; |FREQTEST|DOUT[10]                 ; |FREQTEST|DOUT[10]                 ; padout           ;
+; |FREQTEST|DOUT[11]~output          ; |FREQTEST|DOUT[11]~output          ; o                ;
+; |FREQTEST|DOUT[11]                 ; |FREQTEST|DOUT[11]                 ; padout           ;
+; |FREQTEST|DOUT[12]~output          ; |FREQTEST|DOUT[12]~output          ; o                ;
+; |FREQTEST|DOUT[12]                 ; |FREQTEST|DOUT[12]                 ; padout           ;
+; |FREQTEST|DOUT[13]~output          ; |FREQTEST|DOUT[13]~output          ; o                ;
+; |FREQTEST|DOUT[13]                 ; |FREQTEST|DOUT[13]                 ; padout           ;
+; |FREQTEST|DOUT[14]~output          ; |FREQTEST|DOUT[14]~output          ; o                ;
+; |FREQTEST|DOUT[14]                 ; |FREQTEST|DOUT[14]                 ; padout           ;
+; |FREQTEST|DOUT[15]~output          ; |FREQTEST|DOUT[15]~output          ; o                ;
+; |FREQTEST|DOUT[15]                 ; |FREQTEST|DOUT[15]                 ; padout           ;
+; |FREQTEST|DOUT[16]~output          ; |FREQTEST|DOUT[16]~output          ; o                ;
+; |FREQTEST|DOUT[16]                 ; |FREQTEST|DOUT[16]                 ; padout           ;
+; |FREQTEST|DOUT[17]~output          ; |FREQTEST|DOUT[17]~output          ; o                ;
+; |FREQTEST|DOUT[17]                 ; |FREQTEST|DOUT[17]                 ; padout           ;
+; |FREQTEST|DOUT[18]~output          ; |FREQTEST|DOUT[18]~output          ; o                ;
+; |FREQTEST|DOUT[18]                 ; |FREQTEST|DOUT[18]                 ; padout           ;
+; |FREQTEST|DOUT[19]~output          ; |FREQTEST|DOUT[19]~output          ; o                ;
+; |FREQTEST|DOUT[19]                 ; |FREQTEST|DOUT[19]                 ; padout           ;
+; |FREQTEST|DOUT[20]~output          ; |FREQTEST|DOUT[20]~output          ; o                ;
+; |FREQTEST|DOUT[20]                 ; |FREQTEST|DOUT[20]                 ; padout           ;
+; |FREQTEST|DOUT[21]~output          ; |FREQTEST|DOUT[21]~output          ; o                ;
+; |FREQTEST|DOUT[21]                 ; |FREQTEST|DOUT[21]                 ; padout           ;
+; |FREQTEST|DOUT[22]~output          ; |FREQTEST|DOUT[22]~output          ; o                ;
+; |FREQTEST|DOUT[22]                 ; |FREQTEST|DOUT[22]                 ; padout           ;
+; |FREQTEST|DOUT[23]~output          ; |FREQTEST|DOUT[23]~output          ; o                ;
+; |FREQTEST|DOUT[23]                 ; |FREQTEST|DOUT[23]                 ; padout           ;
+; |FREQTEST|DOUT[24]~output          ; |FREQTEST|DOUT[24]~output          ; o                ;
+; |FREQTEST|DOUT[24]                 ; |FREQTEST|DOUT[24]                 ; padout           ;
+; |FREQTEST|DOUT[25]~output          ; |FREQTEST|DOUT[25]~output          ; o                ;
+; |FREQTEST|DOUT[25]                 ; |FREQTEST|DOUT[25]                 ; padout           ;
+; |FREQTEST|DOUT[26]~output          ; |FREQTEST|DOUT[26]~output          ; o                ;
+; |FREQTEST|DOUT[26]                 ; |FREQTEST|DOUT[26]                 ; padout           ;
+; |FREQTEST|DOUT[27]~output          ; |FREQTEST|DOUT[27]~output          ; o                ;
+; |FREQTEST|DOUT[27]                 ; |FREQTEST|DOUT[27]                 ; padout           ;
+; |FREQTEST|DOUT[28]~output          ; |FREQTEST|DOUT[28]~output          ; o                ;
+; |FREQTEST|DOUT[28]                 ; |FREQTEST|DOUT[28]                 ; padout           ;
+; |FREQTEST|DOUT[29]~output          ; |FREQTEST|DOUT[29]~output          ; o                ;
+; |FREQTEST|DOUT[29]                 ; |FREQTEST|DOUT[29]                 ; padout           ;
+; |FREQTEST|DOUT[30]~output          ; |FREQTEST|DOUT[30]~output          ; o                ;
+; |FREQTEST|DOUT[30]                 ; |FREQTEST|DOUT[30]                 ; padout           ;
+; |FREQTEST|DOUT[31]~output          ; |FREQTEST|DOUT[31]~output          ; o                ;
+; |FREQTEST|DOUT[31]                 ; |FREQTEST|DOUT[31]                 ; padout           ;
+; |FREQTEST|FSIN~input               ; |FREQTEST|FSIN~input               ; o                ;
+; |FREQTEST|FSIN                     ; |FREQTEST|FSIN                     ; padout           ;
+; |FREQTEST|FSIN~inputclkctrl        ; |FREQTEST|FSIN~inputclkctrl        ; outclk           ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |FREQTEST|COUNTER32B:U3|CQI[1]     ; |FREQTEST|COUNTER32B:U3|CQI[1]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[2]     ; |FREQTEST|COUNTER32B:U3|CQI[2]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[3]     ; |FREQTEST|COUNTER32B:U3|CQI[3]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[4]     ; |FREQTEST|COUNTER32B:U3|CQI[4]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[5]     ; |FREQTEST|COUNTER32B:U3|CQI[5]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[6]     ; |FREQTEST|COUNTER32B:U3|CQI[6]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[7]     ; |FREQTEST|COUNTER32B:U3|CQI[7]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[8]     ; |FREQTEST|COUNTER32B:U3|CQI[8]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[9]     ; |FREQTEST|COUNTER32B:U3|CQI[9]     ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[10]    ; |FREQTEST|COUNTER32B:U3|CQI[10]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[11]    ; |FREQTEST|COUNTER32B:U3|CQI[11]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[12]    ; |FREQTEST|COUNTER32B:U3|CQI[12]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[13]    ; |FREQTEST|COUNTER32B:U3|CQI[13]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[14]    ; |FREQTEST|COUNTER32B:U3|CQI[14]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[15]    ; |FREQTEST|COUNTER32B:U3|CQI[15]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[16]    ; |FREQTEST|COUNTER32B:U3|CQI[16]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[17]    ; |FREQTEST|COUNTER32B:U3|CQI[17]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[18]    ; |FREQTEST|COUNTER32B:U3|CQI[18]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[19]    ; |FREQTEST|COUNTER32B:U3|CQI[19]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[20]    ; |FREQTEST|COUNTER32B:U3|CQI[20]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[21]    ; |FREQTEST|COUNTER32B:U3|CQI[21]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[22]    ; |FREQTEST|COUNTER32B:U3|CQI[22]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[23]    ; |FREQTEST|COUNTER32B:U3|CQI[23]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[24]    ; |FREQTEST|COUNTER32B:U3|CQI[24]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[25]    ; |FREQTEST|COUNTER32B:U3|CQI[25]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[26]    ; |FREQTEST|COUNTER32B:U3|CQI[26]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[27]    ; |FREQTEST|COUNTER32B:U3|CQI[27]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[28]    ; |FREQTEST|COUNTER32B:U3|CQI[28]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[29]    ; |FREQTEST|COUNTER32B:U3|CQI[29]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[30]    ; |FREQTEST|COUNTER32B:U3|CQI[30]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[31]    ; |FREQTEST|COUNTER32B:U3|CQI[31]    ; q                ;
+; |FREQTEST|COUNTER32B:U3|CQI[1]~32  ; |FREQTEST|COUNTER32B:U3|CQI[1]~32  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[1]~32  ; |FREQTEST|COUNTER32B:U3|CQI[1]~33  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[2]~34  ; |FREQTEST|COUNTER32B:U3|CQI[2]~34  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[2]~34  ; |FREQTEST|COUNTER32B:U3|CQI[2]~35  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[3]~36  ; |FREQTEST|COUNTER32B:U3|CQI[3]~36  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[3]~36  ; |FREQTEST|COUNTER32B:U3|CQI[3]~37  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[4]~38  ; |FREQTEST|COUNTER32B:U3|CQI[4]~38  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[4]~38  ; |FREQTEST|COUNTER32B:U3|CQI[4]~39  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[5]~40  ; |FREQTEST|COUNTER32B:U3|CQI[5]~40  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[5]~40  ; |FREQTEST|COUNTER32B:U3|CQI[5]~41  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[6]~42  ; |FREQTEST|COUNTER32B:U3|CQI[6]~42  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[6]~42  ; |FREQTEST|COUNTER32B:U3|CQI[6]~43  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[7]~44  ; |FREQTEST|COUNTER32B:U3|CQI[7]~44  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[7]~44  ; |FREQTEST|COUNTER32B:U3|CQI[7]~45  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[8]~46  ; |FREQTEST|COUNTER32B:U3|CQI[8]~46  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[8]~46  ; |FREQTEST|COUNTER32B:U3|CQI[8]~47  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[9]~48  ; |FREQTEST|COUNTER32B:U3|CQI[9]~48  ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[9]~48  ; |FREQTEST|COUNTER32B:U3|CQI[9]~49  ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[10]~50 ; |FREQTEST|COUNTER32B:U3|CQI[10]~50 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[10]~50 ; |FREQTEST|COUNTER32B:U3|CQI[10]~51 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[11]~52 ; |FREQTEST|COUNTER32B:U3|CQI[11]~52 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[11]~52 ; |FREQTEST|COUNTER32B:U3|CQI[11]~53 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[12]~54 ; |FREQTEST|COUNTER32B:U3|CQI[12]~54 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[12]~54 ; |FREQTEST|COUNTER32B:U3|CQI[12]~55 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[13]~56 ; |FREQTEST|COUNTER32B:U3|CQI[13]~56 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[13]~56 ; |FREQTEST|COUNTER32B:U3|CQI[13]~57 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[14]~58 ; |FREQTEST|COUNTER32B:U3|CQI[14]~58 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[14]~58 ; |FREQTEST|COUNTER32B:U3|CQI[14]~59 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[15]~60 ; |FREQTEST|COUNTER32B:U3|CQI[15]~60 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[15]~60 ; |FREQTEST|COUNTER32B:U3|CQI[15]~61 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[16]~62 ; |FREQTEST|COUNTER32B:U3|CQI[16]~62 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[16]~62 ; |FREQTEST|COUNTER32B:U3|CQI[16]~63 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[17]~64 ; |FREQTEST|COUNTER32B:U3|CQI[17]~64 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[17]~64 ; |FREQTEST|COUNTER32B:U3|CQI[17]~65 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[18]~66 ; |FREQTEST|COUNTER32B:U3|CQI[18]~66 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[18]~66 ; |FREQTEST|COUNTER32B:U3|CQI[18]~67 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[19]~68 ; |FREQTEST|COUNTER32B:U3|CQI[19]~68 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[19]~68 ; |FREQTEST|COUNTER32B:U3|CQI[19]~69 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[20]~70 ; |FREQTEST|COUNTER32B:U3|CQI[20]~70 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[20]~70 ; |FREQTEST|COUNTER32B:U3|CQI[20]~71 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[21]~72 ; |FREQTEST|COUNTER32B:U3|CQI[21]~72 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[21]~72 ; |FREQTEST|COUNTER32B:U3|CQI[21]~73 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[22]~74 ; |FREQTEST|COUNTER32B:U3|CQI[22]~74 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[22]~74 ; |FREQTEST|COUNTER32B:U3|CQI[22]~75 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[23]~76 ; |FREQTEST|COUNTER32B:U3|CQI[23]~76 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[23]~76 ; |FREQTEST|COUNTER32B:U3|CQI[23]~77 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[24]~78 ; |FREQTEST|COUNTER32B:U3|CQI[24]~78 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[24]~78 ; |FREQTEST|COUNTER32B:U3|CQI[24]~79 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[25]~80 ; |FREQTEST|COUNTER32B:U3|CQI[25]~80 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[25]~80 ; |FREQTEST|COUNTER32B:U3|CQI[25]~81 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[26]~82 ; |FREQTEST|COUNTER32B:U3|CQI[26]~82 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[26]~82 ; |FREQTEST|COUNTER32B:U3|CQI[26]~83 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[27]~84 ; |FREQTEST|COUNTER32B:U3|CQI[27]~84 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[27]~84 ; |FREQTEST|COUNTER32B:U3|CQI[27]~85 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[28]~86 ; |FREQTEST|COUNTER32B:U3|CQI[28]~86 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[28]~86 ; |FREQTEST|COUNTER32B:U3|CQI[28]~87 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[29]~88 ; |FREQTEST|COUNTER32B:U3|CQI[29]~88 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[29]~88 ; |FREQTEST|COUNTER32B:U3|CQI[29]~89 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[30]~90 ; |FREQTEST|COUNTER32B:U3|CQI[30]~90 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[30]~90 ; |FREQTEST|COUNTER32B:U3|CQI[30]~91 ; cout             ;
+; |FREQTEST|COUNTER32B:U3|CQI[31]~92 ; |FREQTEST|COUNTER32B:U3|CQI[31]~92 ; combout          ;
+; |FREQTEST|COUNTER32B:U3|CQI[0]     ; |FREQTEST|COUNTER32B:U3|CQI[0]     ; q                ;
+; |FREQTEST|DOUT[0]~output           ; |FREQTEST|DOUT[0]~output           ; o                ;
+; |FREQTEST|DOUT[0]                  ; |FREQTEST|DOUT[0]                  ; padout           ;
+; |FREQTEST|DOUT[1]~output           ; |FREQTEST|DOUT[1]~output           ; o                ;
+; |FREQTEST|DOUT[1]                  ; |FREQTEST|DOUT[1]                  ; padout           ;
+; |FREQTEST|DOUT[2]~output           ; |FREQTEST|DOUT[2]~output           ; o                ;
+; |FREQTEST|DOUT[2]                  ; |FREQTEST|DOUT[2]                  ; padout           ;
+; |FREQTEST|DOUT[3]~output           ; |FREQTEST|DOUT[3]~output           ; o                ;
+; |FREQTEST|DOUT[3]                  ; |FREQTEST|DOUT[3]                  ; padout           ;
+; |FREQTEST|DOUT[4]~output           ; |FREQTEST|DOUT[4]~output           ; o                ;
+; |FREQTEST|DOUT[4]                  ; |FREQTEST|DOUT[4]                  ; padout           ;
+; |FREQTEST|DOUT[5]~output           ; |FREQTEST|DOUT[5]~output           ; o                ;
+; |FREQTEST|DOUT[5]                  ; |FREQTEST|DOUT[5]                  ; padout           ;
+; |FREQTEST|DOUT[6]~output           ; |FREQTEST|DOUT[6]~output           ; o                ;
+; |FREQTEST|DOUT[6]                  ; |FREQTEST|DOUT[6]                  ; padout           ;
+; |FREQTEST|DOUT[7]~output           ; |FREQTEST|DOUT[7]~output           ; o                ;
+; |FREQTEST|DOUT[7]                  ; |FREQTEST|DOUT[7]                  ; padout           ;
+; |FREQTEST|DOUT[8]~output           ; |FREQTEST|DOUT[8]~output           ; o                ;
+; |FREQTEST|DOUT[8]                  ; |FREQTEST|DOUT[8]                  ; padout           ;
+; |FREQTEST|DOUT[9]~output           ; |FREQTEST|DOUT[9]~output           ; o                ;
+; |FREQTEST|DOUT[9]                  ; |FREQTEST|DOUT[9]                  ; padout           ;
+; |FREQTEST|DOUT[10]~output          ; |FREQTEST|DOUT[10]~output          ; o                ;
+; |FREQTEST|DOUT[10]                 ; |FREQTEST|DOUT[10]                 ; padout           ;
+; |FREQTEST|DOUT[11]~output          ; |FREQTEST|DOUT[11]~output          ; o                ;
+; |FREQTEST|DOUT[11]                 ; |FREQTEST|DOUT[11]                 ; padout           ;
+; |FREQTEST|DOUT[12]~output          ; |FREQTEST|DOUT[12]~output          ; o                ;
+; |FREQTEST|DOUT[12]                 ; |FREQTEST|DOUT[12]                 ; padout           ;
+; |FREQTEST|DOUT[13]~output          ; |FREQTEST|DOUT[13]~output          ; o                ;
+; |FREQTEST|DOUT[13]                 ; |FREQTEST|DOUT[13]                 ; padout           ;
+; |FREQTEST|DOUT[14]~output          ; |FREQTEST|DOUT[14]~output          ; o                ;
+; |FREQTEST|DOUT[14]                 ; |FREQTEST|DOUT[14]                 ; padout           ;
+; |FREQTEST|DOUT[15]~output          ; |FREQTEST|DOUT[15]~output          ; o                ;
+; |FREQTEST|DOUT[15]                 ; |FREQTEST|DOUT[15]                 ; padout           ;
+; |FREQTEST|DOUT[16]~output          ; |FREQTEST|DOUT[16]~output          ; o                ;
+; |FREQTEST|DOUT[16]                 ; |FREQTEST|DOUT[16]                 ; padout           ;
+; |FREQTEST|DOUT[17]~output          ; |FREQTEST|DOUT[17]~output          ; o                ;
+; |FREQTEST|DOUT[17]                 ; |FREQTEST|DOUT[17]                 ; padout           ;
+; |FREQTEST|DOUT[18]~output          ; |FREQTEST|DOUT[18]~output          ; o                ;
+; |FREQTEST|DOUT[18]                 ; |FREQTEST|DOUT[18]                 ; padout           ;
+; |FREQTEST|DOUT[19]~output          ; |FREQTEST|DOUT[19]~output          ; o                ;
+; |FREQTEST|DOUT[19]                 ; |FREQTEST|DOUT[19]                 ; padout           ;
+; |FREQTEST|DOUT[20]~output          ; |FREQTEST|DOUT[20]~output          ; o                ;
+; |FREQTEST|DOUT[20]                 ; |FREQTEST|DOUT[20]                 ; padout           ;
+; |FREQTEST|DOUT[21]~output          ; |FREQTEST|DOUT[21]~output          ; o                ;
+; |FREQTEST|DOUT[21]                 ; |FREQTEST|DOUT[21]                 ; padout           ;
+; |FREQTEST|DOUT[22]~output          ; |FREQTEST|DOUT[22]~output          ; o                ;
+; |FREQTEST|DOUT[22]                 ; |FREQTEST|DOUT[22]                 ; padout           ;
+; |FREQTEST|DOUT[23]~output          ; |FREQTEST|DOUT[23]~output          ; o                ;
+; |FREQTEST|DOUT[23]                 ; |FREQTEST|DOUT[23]                 ; padout           ;
+; |FREQTEST|DOUT[24]~output          ; |FREQTEST|DOUT[24]~output          ; o                ;
+; |FREQTEST|DOUT[24]                 ; |FREQTEST|DOUT[24]                 ; padout           ;
+; |FREQTEST|DOUT[25]~output          ; |FREQTEST|DOUT[25]~output          ; o                ;
+; |FREQTEST|DOUT[25]                 ; |FREQTEST|DOUT[25]                 ; padout           ;
+; |FREQTEST|DOUT[26]~output          ; |FREQTEST|DOUT[26]~output          ; o                ;
+; |FREQTEST|DOUT[26]                 ; |FREQTEST|DOUT[26]                 ; padout           ;
+; |FREQTEST|DOUT[27]~output          ; |FREQTEST|DOUT[27]~output          ; o                ;
+; |FREQTEST|DOUT[27]                 ; |FREQTEST|DOUT[27]                 ; padout           ;
+; |FREQTEST|DOUT[28]~output          ; |FREQTEST|DOUT[28]~output          ; o                ;
+; |FREQTEST|DOUT[28]                 ; |FREQTEST|DOUT[28]                 ; padout           ;
+; |FREQTEST|DOUT[29]~output          ; |FREQTEST|DOUT[29]~output          ; o                ;
+; |FREQTEST|DOUT[29]                 ; |FREQTEST|DOUT[29]                 ; padout           ;
+; |FREQTEST|DOUT[30]~output          ; |FREQTEST|DOUT[30]~output          ; o                ;
+; |FREQTEST|DOUT[30]                 ; |FREQTEST|DOUT[30]                 ; padout           ;
+; |FREQTEST|DOUT[31]~output          ; |FREQTEST|DOUT[31]~output          ; o                ;
+; |FREQTEST|DOUT[31]                 ; |FREQTEST|DOUT[31]                 ; padout           ;
+; |FREQTEST|FSIN~input               ; |FREQTEST|FSIN~input               ; o                ;
+; |FREQTEST|FSIN                     ; |FREQTEST|FSIN                     ; padout           ;
+; |FREQTEST|FSIN~inputclkctrl        ; |FREQTEST|FSIN~inputclkctrl        ; outclk           ;
++------------------------------------+------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Dec 08 16:19:41 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FREQTEST -c FREQTEST
+Info: Using vector source file "D:/Documents/Desktop/EDA/EDA实验/EDA实验四/FREQTEST/FREQTEST.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of FREQTEST.vwf called FREQTEST.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       4.19 %
+Info: Number of transitions in simulation is 698
+Info: Vector file FREQTEST.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Fri Dec 08 16:19:41 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

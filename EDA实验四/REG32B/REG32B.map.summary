@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 08 15:16:22 2017
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : REG32B
+Top-level Entity Name : REG32B
+Family : Cyclone III
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 65
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

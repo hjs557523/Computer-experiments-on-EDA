@@ -1,0 +1,932 @@
+Analysis & Synthesis report for SIN_GNT
+Fri Nov 24 18:30:28 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for CNT7B:inst2|lpm_counter:lpm_counter_component
+ 14. Source assignments for ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1
+ 15. Source assignments for ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+ 16. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body
+ 17. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst
+ 18. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kvs3:auto_generated
+ 19. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter
+ 20. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter
+ 21. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter
+ 22. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter
+ 23. Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr
+ 24. Source assignments for sld_hub:auto_hub
+ 25. Source assignments for sld_hub:auto_hub|sld_rom_sr:hub_info_reg
+ 26. Parameter Settings for User Entity Instance: CNT7B:inst2|lpm_counter:lpm_counter_component
+ 27. Parameter Settings for User Entity Instance: ROM78:inst|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2
+ 29. Parameter Settings for Inferred Entity Instance: sld_signaltap:SIN
+ 30. Parameter Settings for Inferred Entity Instance: sld_hub:auto_hub
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. SignalTap II Logic Analyzer Settings
+ 33. In-System Memory Content Editor Settings
+ 34. Connections to In-System Debugging Instance "SIN"
+ 35. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 24 18:30:28 2017        ;
+; Quartus II Version                 ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
+; Revision Name                      ; SIN_GNT                                      ;
+; Top-level Entity Name              ; SIN_GNT                                      ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 819                                          ;
+;     Total combinational functions  ; 519                                          ;
+;     Dedicated logic registers      ; 622                                          ;
+; Total registers                    ; 622                                          ;
+; Total pins                         ; 20                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 62,464                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C10E144C8       ;                    ;
+; Top-level entity name                                                      ; SIN_GNT            ; SIN_GNT            ;
+; Family name                                                                ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+
+; ROM78.v                          ; yes             ; User Wizard-Generated File             ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/ROM78.v                           ;
+; CNT7B.v                          ; yes             ; User Wizard-Generated File             ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/CNT7B.v                           ;
+; SIN_GNT.bdf                      ; yes             ; User Block Diagram/Schematic File      ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/SIN_GNT.bdf                       ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                           ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_counter.tdf              ;
+; db/cntr_d9j.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cntr_d9j.tdf                   ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp1/quartus/libraries/megafunctions/altsyncram.tdf               ;
+; db/altsyncram_pub1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/altsyncram_pub1.tdf            ;
+; db/altsyncram_tad2.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/altsyncram_tad2.tdf            ;
+; DATA7X8.mif                      ; yes             ; Auto-Found Memory Initialization File  ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/DATA7X8.mif                       ;
+; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd          ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;
+; sld_signaltap.vhd                ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_signaltap.vhd            ;
+; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_ela_control.vhd          ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                           ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;
+; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;
+; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;
+; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;
+; db/altsyncram_kvs3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/altsyncram_kvs3.tdf            ;
+; altdpram.tdf                     ; yes             ; Megafunction                           ; c:/altera/91sp1/quartus/libraries/megafunctions/altdpram.tdf                 ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_mux.tdf                  ;
+; db/mux_krc.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/mux_krc.tdf                    ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_decode.tdf               ;
+; db/decode_4uf.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/decode_4uf.tdf                 ;
+; db/cntr_5fi.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cntr_5fi.tdf                   ;
+; db/cmpr_hfc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cmpr_hfc.tdf                   ;
+; db/cntr_d8j.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cntr_d8j.tdf                   ;
+; db/cntr_7fi.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cntr_7fi.tdf                   ;
+; db/cmpr_ifc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cmpr_ifc.tdf                   ;
+; db/cntr_p1j.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cntr_p1j.tdf                   ;
+; db/cmpr_efc.tdf                  ; yes             ; Auto-Generated Megafunction            ; D:/Documents/Desktop/EDA/EDA实验/EDA实验三/db/cmpr_efc.tdf                   ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                 ; c:/altera/91sp1/quartus/libraries/megafunctions/sld_hub.vhd                  ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 819                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 519                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 225                      ;
+;     -- 3 input functions                    ; 145                      ;
+;     -- <=2 input functions                  ; 149                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 440                      ;
+;     -- arithmetic mode                      ; 79                       ;
+;                                             ;                          ;
+; Total registers                             ; 622                      ;
+;     -- Dedicated logic registers            ; 622                      ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 20                       ;
+; Total memory bits                           ; 62464                    ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 386                      ;
+; Total fan-out                               ; 4193                     ;
+; Average fan-out                             ; 3.46                     ;
++---------------------------------------------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                                                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                       ; Library Name ;
++------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |SIN_GNT                                                                                             ; 519 (1)           ; 622 (0)      ; 62464       ; 0            ; 0       ; 0         ; 20   ; 0            ; |SIN_GNT                                                                                                                                                                                                                                                                                  ; work         ;
+;    |CNT7B:inst2|                                                                                     ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|CNT7B:inst2                                                                                                                                                                                                                                                                      ;              ;
+;       |lpm_counter:lpm_counter_component|                                                            ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|CNT7B:inst2|lpm_counter:lpm_counter_component                                                                                                                                                                                                                                    ;              ;
+;          |cntr_d9j:auto_generated|                                                                   ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated                                                                                                                                                                                                            ;              ;
+;    |ROM78:inst|                                                                                      ; 60 (0)            ; 34 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|ROM78:inst                                                                                                                                                                                                                                                                       ;              ;
+;       |altsyncram:altsyncram_component|                                                              ; 60 (0)            ; 34 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                       ;              ;
+;          |altsyncram_pub1:auto_generated|                                                            ; 60 (0)            ; 34 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated                                                                                                                                                                                                        ;              ;
+;             |altsyncram_tad2:altsyncram1|                                                            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1                                                                                                                                                                            ;              ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                              ; 60 (35)           ; 34 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                              ;              ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                  ; 25 (25)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                           ;              ;
+;    |sld_hub:auto_hub|                                                                                ; 132 (95)          ; 91 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_hub:auto_hub                                                                                                                                                                                                                                                                 ;              ;
+;       |sld_rom_sr:hub_info_reg|                                                                      ; 20 (20)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_hub:auto_hub|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                         ;              ;
+;       |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                       ;              ;
+;    |sld_signaltap:SIN|                                                                               ; 318 (1)           ; 490 (0)      ; 61440       ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN                                                                                                                                                                                                                                                                ;              ;
+;       |sld_signaltap_impl:sld_signaltap_body|                                                        ; 317 (18)          ; 490 (127)    ; 61440       ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                          ;              ;
+;          |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                            ; 27 (0)            ; 76 (76)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                           ;              ;
+;             |lpm_decode:wdecoder|                                                                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                       ;              ;
+;                |decode_4uf:auto_generated|                                                           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_4uf:auto_generated                                                                                                             ;              ;
+;             |lpm_mux:mux|                                                                            ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux                                                                                                                                               ;              ;
+;                |mux_krc:auto_generated|                                                              ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux|mux_krc:auto_generated                                                                                                                        ;              ;
+;          |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                           ; 0 (0)             ; 0 (0)        ; 61440       ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                          ;              ;
+;             |altsyncram_kvs3:auto_generated|                                                         ; 0 (0)             ; 0 (0)        ; 61440       ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kvs3:auto_generated                                                                                                                                           ;              ;
+;          |lpm_shiftreg:segment_offset_config_deserialize|                                            ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                           ;              ;
+;          |lpm_shiftreg:status_register|                                                              ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                             ;              ;
+;          |sld_buffer_manager:sld_buffer_manager_inst|                                                ; 93 (93)           ; 69 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                               ;              ;
+;          |sld_ela_control:ela_control|                                                               ; 41 (3)            ; 94 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                              ;              ;
+;             |lpm_shiftreg:trigger_config_deserialize|                                                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                      ;              ;
+;             |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm| ; 30 (0)            ; 75 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                       ;              ;
+;                |lpm_shiftreg:trigger_condition_deserialize|                                          ; 0 (0)             ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize                                                            ;              ;
+;                |sld_mbpmg:\trigger_modules_gen:0:trigger_match|                                      ; 30 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                        ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1  ;              ;
+;             |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|                          ; 6 (6)             ; 11 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                ;              ;
+;                |lpm_shiftreg:trigger_config_deserialize|                                             ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                        ;              ;
+;             |sld_mbpmg:\trigger_in_trigger_module_enabled_gen:trigger_in_match|                      ; 2 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_mbpmg:\trigger_in_trigger_module_enabled_gen:trigger_in_match                                                                                                                            ;              ;
+;                |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                               ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_mbpmg:\trigger_in_trigger_module_enabled_gen:trigger_in_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1                                                                      ;              ;
+;          |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|          ; 103 (10)          ; 87 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                         ;              ;
+;             |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                              ; 6 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                               ;              ;
+;                |cntr_5fi:auto_generated|                                                             ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_5fi:auto_generated                                                       ;              ;
+;             |lpm_counter:read_pointer_counter|                                                       ; 12 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                        ;              ;
+;                |cntr_d8j:auto_generated|                                                             ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_d8j:auto_generated                                                                                ;              ;
+;             |lpm_counter:status_advance_pointer_counter|                                             ; 7 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                              ;              ;
+;                |cntr_7fi:auto_generated|                                                             ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter|cntr_7fi:auto_generated                                                                      ;              ;
+;             |lpm_counter:status_read_pointer_counter|                                                ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                 ;              ;
+;                |cntr_p1j:auto_generated|                                                             ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_p1j:auto_generated                                                                         ;              ;
+;             |lpm_shiftreg:info_data_shift_out|                                                       ; 25 (25)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                        ;              ;
+;             |lpm_shiftreg:ram_data_shift_out|                                                        ; 15 (15)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                         ;              ;
+;             |lpm_shiftreg:status_data_shift_out|                                                     ; 25 (25)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                      ;              ;
+;          |sld_rom_sr:crc_rom_sr|                                                                     ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                    ;              ;
++------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------+
+; Name                                                                                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------+
+; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|ALTSYNCRAM                                  ; AUTO ; True Dual Port   ; 128          ; 8            ; 128          ; 8            ; 1024  ; DATA7X8.mif ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kvs3:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 15           ; 4096         ; 15           ; 61440 ; None        ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                                                    ;
++-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                       ; Reason for Removal                                                                                                                              ;
++-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|segment_shift_clk_ena                                                       ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_enable_delayed                                                 ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[0]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[0]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[1]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[1]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[2]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[2]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[3]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[3]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[4]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[4]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[5]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[5]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[6]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[6]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[7]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[7]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[8]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[8]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[9]  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[9]  ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[10] ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[10] ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[11] ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[11] ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[0]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[0]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[1]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[1]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[2]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[2]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[3]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[3]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[4]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[4]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[5]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[5]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[6]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[6]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[7]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[7]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[8]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[8]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[9]                                                   ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[9]                                             ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[10]                                                  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[10]                                            ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[11]                                                  ; Merged with sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[11]                                            ;
+; Total Number of Removed Registers = 25                                                                                              ;                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 622   ;
+; Number of registers using Synchronous Clear  ; 21    ;
+; Number of registers using Synchronous Load   ; 36    ;
+; Number of registers using Asynchronous Clear ; 293   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 343   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                         ;
++----------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                          ; Fan out ;
++----------------------------------------------------------------------------------------------------------------------------+---------+
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[2]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[3]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[4]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[5]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[6]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[7]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[8]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[9]  ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[10] ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[11] ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[12] ; 1       ;
+; sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]  ; 1       ;
+; sld_hub:auto_hub|tdo                                                                                                       ; 2       ;
+; Total number of inverted registers = 14                                                                                    ;         ;
++----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |SIN_GNT|ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[12]                                                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|word_counter[0]                                                                          ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 28 LEs               ; 4 LEs                  ; Yes        ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[1]                                                                               ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |SIN_GNT|sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|offset_count                                                        ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|irf_reg[2][5]                                                                                                                                         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|irf_reg[1][0]                                                                                                                                         ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|word_counter[0]                                                                                                               ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|shadow_irf_reg[2][6]                                                                                                                                  ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|shadow_irf_reg[1][6]                                                                                                                                  ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|irsr_reg[7]                                                                                                                                           ;
+; 28:1               ; 4 bits    ; 72 LEs        ; 40 LEs               ; 32 LEs                 ; Yes        ; |SIN_GNT|sld_hub:auto_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Source assignments for CNT7B:inst2|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+---------------------------+
+; Assignment                ; Value ; From ; To                        ;
++---------------------------+-------+------+---------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                         ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                         ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                         ;
++---------------------------+-------+------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ;
++----------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment           ; Value ; From ; To                                                                                                                                      ;
++----------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                                                                                                                                       ;
++----------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body ;
++---------------------------------+-------+------+-------------------------------+
+; Assignment                      ; Value ; From ; To                            ;
++---------------------------------+-------+------+-------------------------------+
+; NOT_GATE_PUSH_BACK              ; OFF   ; -    ; -                             ;
+; POWER_UP_LEVEL                  ; LOW   ; -    ; -                             ;
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                             ;
++---------------------------------+-------+------+-------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst ;
++--------------------+-------+------+---------------------------------------------------------------------------------------+
+; Assignment         ; Value ; From ; To                                                                                    ;
++--------------------+-------+------+---------------------------------------------------------------------------------------+
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[6]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[5]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[4]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[3]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[2]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[1]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[0]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[7]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[8]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[9]                                                                ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[10]                                                               ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[11]                                                               ;
+; NOT_GATE_PUSH_BACK ; ON    ; -    ; modified_post_count[12]                                                               ;
++--------------------+-------+------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_kvs3:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                                                                                             ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                                                                                                                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                                                                                                                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                                                                                                                              ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter ;
++---------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                                                                    ;
++---------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                                                                                                     ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                                                                                                     ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                                                                                                     ;
++---------------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter ;
++---------------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                                                                              ;
++---------------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                                                                                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                                                                                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                                                                                                               ;
++---------------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                                                                                                           ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                                                                                                            ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                                                                                                            ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                                                                                                            ;
++---------------------------+-------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Source assignments for sld_signaltap:SIN|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr ;
++----------------------+-------+------+----------------------------------------------------------------+
+; Assignment           ; Value ; From ; To                                                             ;
++----------------------+-------+------+----------------------------------------------------------------+
+; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                                                              ;
++----------------------+-------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Source assignments for sld_hub:auto_hub               ;
++------------------------------+-------+------+---------+
+; Assignment                   ; Value ; From ; To      ;
++------------------------------+-------+------+---------+
+; IGNORE_LCELL_BUFFERS         ; OFF   ; -    ; -       ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; OFF   ; -    ; -       ;
+; NOT_GATE_PUSH_BACK           ; OFF   ; -    ; clr_reg ;
+; POWER_UP_LEVEL               ; LOW   ; -    ; clr_reg ;
++------------------------------+-------+------+---------+
+
+
++-----------------------------------------------------------------+
+; Source assignments for sld_hub:auto_hub|sld_rom_sr:hub_info_reg ;
++----------------------+-------+------+---------------------------+
+; Assignment           ; Value ; From ; To                        ;
++----------------------+-------+------+---------------------------+
+; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                         ;
++----------------------+-------+------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CNT7B:inst2|lpm_counter:lpm_counter_component ;
++------------------------+-------------+-----------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                ;
++------------------------+-------------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 7           ; Signed Integer                                      ;
+; LPM_DIRECTION          ; UP          ; Untyped                                             ;
+; LPM_MODULUS            ; 0           ; Untyped                                             ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                             ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                             ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                             ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                  ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                  ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                             ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                             ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                             ;
+; CBXI_PARAMETER         ; cntr_d9j    ; Untyped                                             ;
++------------------------+-------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM78:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                     ;
+; WIDTH_A                            ; 8                    ; Signed Integer              ;
+; WIDTHAD_A                          ; 7                    ; Signed Integer              ;
+; NUMWORDS_A                         ; 128                  ; Signed Integer              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 1                    ; Untyped                     ;
+; WIDTHAD_B                          ; 1                    ; Untyped                     ;
+; NUMWORDS_B                         ; 1                    ; Untyped                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; INIT_FILE                          ; DATA7X8.mif          ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_pub1      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2 ;
++-------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value      ; Type                                                                                                      ;
++-------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; SLD_NODE_INFO           ; 135818752  ; Signed Integer                                                                                            ;
+; SLD_AUTO_INSTANCE_INDEX ; yes        ; String                                                                                                    ;
+; SLD_IP_VERSION          ; 1          ; Signed Integer                                                                                            ;
+; SLD_IP_MINOR_VERSION    ; 3          ; Signed Integer                                                                                            ;
+; SLD_COMMON_IP_VERSION   ; 0          ; Signed Integer                                                                                            ;
+; width_word              ; 8          ; Untyped                                                                                                   ;
+; numwords                ; 128        ; Untyped                                                                                                   ;
+; widthad                 ; 7          ; Untyped                                                                                                   ;
+; shift_count_bits        ; 4          ; Untyped                                                                                                   ;
+; cvalue                  ; 00000000   ; Untyped                                                                                                   ;
+; is_data_in_ram          ; 1          ; Untyped                                                                                                   ;
+; is_readable             ; 1          ; Untyped                                                                                                   ;
+; node_name               ; 1297699405 ; Untyped                                                                                                   ;
++-------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_signaltap:SIN                                                                         ;
++-------------------------------------------------+-------------------------------------------------------------------------+----------------+
+; Parameter Name                                  ; Value                                                                   ; Type           ;
++-------------------------------------------------+-------------------------------------------------------------------------+----------------+
+; lpm_type                                        ; sld_signaltap                                                           ; String         ;
+; sld_node_info                                   ; 805334528                                                               ; Untyped        ;
+; SLD_IP_VERSION                                  ; 6                                                                       ; Signed Integer ;
+; SLD_IP_MINOR_VERSION                            ; 0                                                                       ; Signed Integer ;
+; SLD_COMMON_IP_VERSION                           ; 0                                                                       ; Signed Integer ;
+; sld_data_bits                                   ; 15                                                                      ; Untyped        ;
+; sld_trigger_bits                                ; 15                                                                      ; Untyped        ;
+; SLD_NODE_CRC_BITS                               ; 32                                                                      ; Signed Integer ;
+; sld_node_crc_hiword                             ; 32469                                                                   ; Untyped        ;
+; sld_node_crc_loword                             ; 45197                                                                   ; Untyped        ;
+; SLD_INCREMENTAL_ROUTING                         ; 0                                                                       ; Signed Integer ;
+; sld_sample_depth                                ; 4096                                                                    ; Untyped        ;
+; sld_segment_size                                ; 4096                                                                    ; Untyped        ;
+; SLD_RAM_BLOCK_TYPE                              ; AUTO                                                                    ; String         ;
+; sld_state_bits                                  ; 11                                                                      ; Untyped        ;
+; sld_buffer_full_stop                            ; 1                                                                       ; Untyped        ;
+; SLD_MEM_ADDRESS_BITS                            ; 7                                                                       ; Signed Integer ;
+; SLD_DATA_BIT_CNTR_BITS                          ; 4                                                                       ; Signed Integer ;
+; sld_trigger_level                               ; 1                                                                       ; Untyped        ;
+; sld_trigger_in_enabled                          ; 1                                                                       ; Untyped        ;
+; sld_advanced_trigger_entity                     ; basic,1,                                                                ; Untyped        ;
+; sld_trigger_level_pipeline                      ; 1                                                                       ; Untyped        ;
+; sld_enable_advanced_trigger                     ; 0                                                                       ; Untyped        ;
+; SLD_ADVANCED_TRIGGER_1                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_2                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_3                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_4                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_5                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_6                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_7                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_8                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_9                          ; NONE                                                                    ; String         ;
+; SLD_ADVANCED_TRIGGER_10                         ; NONE                                                                    ; String         ;
+; sld_inversion_mask_length                       ; 71                                                                      ; Untyped        ;
+; sld_inversion_mask                              ; 00000000000000000000000000000000000000000000000000000000000000000000000 ; Untyped        ;
+; sld_power_up_trigger                            ; 0                                                                       ; Untyped        ;
+; SLD_STATE_FLOW_MGR_ENTITY                       ; state_flow_mgr_entity.vhd                                               ; String         ;
+; sld_state_flow_use_generated                    ; 0                                                                       ; Untyped        ;
+; sld_current_resource_width                      ; 1                                                                       ; Untyped        ;
+; sld_attribute_mem_mode                          ; OFF                                                                     ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_BITS                      ; 1                                                                       ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                                                                       ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                                                                     ; String         ;
+; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                                                                       ; Signed Integer ;
+; sld_storage_qualifier_inversion_mask_length     ; 0                                                                       ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY ; basic                                                                   ; String         ;
+; SLD_STORAGE_QUALIFIER_PIPELINE                  ; 0                                                                       ; Signed Integer ;
++-------------------------------------------------+-------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_hub:auto_hub                                             ;
++--------------------------+------------------------------------------------------------------+-----------------+
+; Parameter Name           ; Value                                                            ; Type            ;
++--------------------------+------------------------------------------------------------------+-----------------+
+; sld_hub_ip_version       ; 1                                                                ; Untyped         ;
+; sld_hub_ip_minor_version ; 4                                                                ; Untyped         ;
+; sld_common_ip_version    ; 0                                                                ; Untyped         ;
+; device_family            ; Cyclone III                                                      ; Untyped         ;
+; n_nodes                  ; 2                                                                ; Untyped         ;
+; n_sel_bits               ; 2                                                                ; Untyped         ;
+; n_node_ir_bits           ; 8                                                                ; Untyped         ;
+; node_info                ; 0011000000000000011011100000000000001000000110000110111000000000 ; Unsigned Binary ;
+; compilation_mode         ; 1                                                                ; Untyped         ;
+; BROADCAST_FEATURE        ; 1                                                                ; Signed Integer  ;
+; FORCE_IR_CAPTURE_FEATURE ; 1                                                                ; Signed Integer  ;
++--------------------------+------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                       ;
++-------------------------------------------+--------------------------------------------+
+; Name                                      ; Value                                      ;
++-------------------------------------------+--------------------------------------------+
+; Number of entity instances                ; 1                                          ;
+; Entity Instance                           ; ROM78:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                        ;
+;     -- WIDTH_A                            ; 8                                          ;
+;     -- NUMWORDS_A                         ; 128                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                               ;
+;     -- WIDTH_B                            ; 1                                          ;
+;     -- NUMWORDS_B                         ; 1                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                     ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                  ;
++-------------------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SignalTap II Logic Analyzer Settings                                                                                                                                                                                                        ;
++----------------+---------------+---------------------+------------------+--------------+----------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; Instance Index ; Instance Name ; Trigger Input Width ; Data Input Width ; Sample Depth ; Segments ; Trigger Flow Control ; Trigger Conditions ; Advanced Trigger Conditions ; Trigger In Used ; Trigger Out Used ; Power-Up Trigger Enabled ;
++----------------+---------------+---------------------+------------------+--------------+----------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; 0              ; SIN           ; 15                  ; 15               ; 4096         ; 1        ; sequential           ; 1                  ; 0                           ; no              ; no               ; no                       ;
++----------------+---------------+---------------------+------------------+--------------+----------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                              ;
++----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                        ;
++----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
+; 0              ; MYRM        ; 8     ; 128   ; Read/Write ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated ;
++----------------+-------------+-------+-------+------------+---------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "SIN"                                                                                                                                               ;
++-------+---------------+-----------+----------------+-------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; Name  ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                                                                                            ; Details ;
++-------+---------------+-----------+----------------+-------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; AR[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[0]                     ; N/A     ;
+; AR[0] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[0]                     ; N/A     ;
+; AR[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[1]                     ; N/A     ;
+; AR[1] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[1]                     ; N/A     ;
+; AR[2] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[2]                     ; N/A     ;
+; AR[2] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[2]                     ; N/A     ;
+; AR[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[3]                     ; N/A     ;
+; AR[3] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[3]                     ; N/A     ;
+; AR[4] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[4]                     ; N/A     ;
+; AR[4] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[4]                     ; N/A     ;
+; AR[5] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[5]                     ; N/A     ;
+; AR[5] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[5]                     ; N/A     ;
+; AR[6] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[6]                     ; N/A     ;
+; AR[6] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated|counter_reg_bit[6]                     ; N/A     ;
+; CLK   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; CLK                                                                                                          ; N/A     ;
+; EN    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; EN                                                                                                           ; N/A     ;
+; Q[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[0] ; N/A     ;
+; Q[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[0] ; N/A     ;
+; Q[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[1] ; N/A     ;
+; Q[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[1] ; N/A     ;
+; Q[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[2] ; N/A     ;
+; Q[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[2] ; N/A     ;
+; Q[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[3] ; N/A     ;
+; Q[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[3] ; N/A     ;
+; Q[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[4] ; N/A     ;
+; Q[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[4] ; N/A     ;
+; Q[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[5] ; N/A     ;
+; Q[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[5] ; N/A     ;
+; Q[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[6] ; N/A     ;
+; Q[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[6] ; N/A     ;
+; Q[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[7] ; N/A     ;
+; Q[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1|q_a[7] ; N/A     ;
++-------+---------------+-----------+----------------+-------------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 24 18:30:18 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SIN_GNT -c SIN_GNT
+Info: Found 1 design units, including 1 entities, in source file rom78.v
+    Info: Found entity 1: ROM78
+Info: Found 1 design units, including 1 entities, in source file cnt4b.v
+    Info: Found entity 1: CNT4B
+Info: Found 1 design units, including 1 entities, in source file cnt7b.v
+    Info: Found entity 1: CNT7B
+Info: Found 1 design units, including 1 entities, in source file sin_gnt.bdf
+    Info: Found entity 1: SIN_GNT
+Info: Elaborating entity "SIN_GNT" for the top level hierarchy
+Info: Elaborating entity "CNT7B" for hierarchy "CNT7B:inst2"
+Info: Elaborating entity "lpm_counter" for hierarchy "CNT7B:inst2|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "CNT7B:inst2|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "CNT7B:inst2|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "7"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_d9j.tdf
+    Info: Found entity 1: cntr_d9j
+Info: Elaborating entity "cntr_d9j" for hierarchy "CNT7B:inst2|lpm_counter:lpm_counter_component|cntr_d9j:auto_generated"
+Info: Elaborating entity "ROM78" for hierarchy "ROM78:inst"
+Info: Elaborating entity "altsyncram" for hierarchy "ROM78:inst|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "ROM78:inst|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "ROM78:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "address_aclr_a" = "NONE"
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "DATA7X8.mif"
+    Info: Parameter "intended_device_family" = "Cyclone III"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=MYRM"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "128"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "widthad_a" = "7"
+    Info: Parameter "width_a" = "8"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_pub1.tdf
+    Info: Found entity 1: altsyncram_pub1
+Info: Elaborating entity "altsyncram_pub1" for hierarchy "ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_tad2.tdf
+    Info: Found entity 1: altsyncram_tad2
+Info: Elaborating entity "altsyncram_tad2" for hierarchy "ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|altsyncram_tad2:altsyncram1"
+Info: Elaborating entity "sld_mod_ram_rom" for hierarchy "ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info: Elaborated megafunction instantiation "ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info: Instantiated megafunction "ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info: Parameter "CVALUE" = "00000000"
+    Info: Parameter "IS_DATA_IN_RAM" = "1"
+    Info: Parameter "IS_READABLE" = "1"
+    Info: Parameter "NODE_NAME" = "1297699405"
+    Info: Parameter "NUMWORDS" = "128"
+    Info: Parameter "SHIFT_COUNT_BITS" = "4"
+    Info: Parameter "WIDTH_WORD" = "8"
+    Info: Parameter "WIDTHAD" = "7"
+Info: Elaborating entity "sld_rom_sr" for hierarchy "ROM78:inst|altsyncram:altsyncram_component|altsyncram_pub1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_kvs3.tdf
+    Info: Found entity 1: altsyncram_kvs3
+Info: Found 1 design units, including 1 entities, in source file db/mux_krc.tdf
+    Info: Found entity 1: mux_krc
+Info: Found 1 design units, including 1 entities, in source file db/decode_4uf.tdf
+    Info: Found entity 1: decode_4uf
+Info: Found 1 design units, including 1 entities, in source file db/cntr_5fi.tdf
+    Info: Found entity 1: cntr_5fi
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_hfc.tdf
+    Info: Found entity 1: cmpr_hfc
+Info: Found 1 design units, including 1 entities, in source file db/cntr_d8j.tdf
+    Info: Found entity 1: cntr_d8j
+Info: Found 1 design units, including 1 entities, in source file db/cntr_7fi.tdf
+    Info: Found entity 1: cntr_7fi
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_ifc.tdf
+    Info: Found entity 1: cmpr_ifc
+Info: Found 1 design units, including 1 entities, in source file db/cntr_p1j.tdf
+    Info: Found entity 1: cntr_p1j
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_efc.tdf
+    Info: Found entity 1: cmpr_efc
+Info: Analysis and Synthesis generated SignalTap II or debug node instance "SIN"
+Info: Timing-Driven Synthesis is running on partition "Top"
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: Timing-Driven Synthesis is running on partition "sld_signaltap:SIN"
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info: Succesfully connected in-system debug instance "SIN" to all 32 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info: Implemented 885 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 837 logic cells
+    Info: Implemented 23 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 283 megabytes
+    Info: Processing ended: Fri Nov 24 18:30:28 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:08
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="yuequyanzou">
+		<CBX_INST_ENTRY INSTANCE_NAME="|yuequyanzou|PLL20:inst|altpll:altpll_component" CBX_FILE_NAME="PLL20_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|yuequyanzou|music:inst1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_a4a1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

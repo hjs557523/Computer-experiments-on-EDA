@@ -1,0 +1,411 @@
+Simulator report for 6-4
+Sat Dec 09 20:04:02 2017
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 106 nodes    ;
+; Simulation Coverage         ;      18.38 % ;
+; Total Number of Transitions ; 1044         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      18.38 % ;
+; Total nodes checked                                 ; 106          ;
+; Total output ports checked                          ; 136          ;
+; Total output ports with complete 1/0-value coverage ; 25           ;
+; Total output ports with no 1/0-value coverage       ; 111          ;
+; Total output ports with no 1-value coverage         ; 111          ;
+; Total output ports with no 0-value coverage         ; 111          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |6-4|COUNTER32B:inst7|Add0~1     ; |6-4|COUNTER32B:inst7|Add0~1     ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~1     ; |6-4|COUNTER32B:inst7|Add0~2     ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~5     ; |6-4|COUNTER32B:inst7|Add0~5     ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~5     ; |6-4|COUNTER32B:inst7|Add0~6     ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~9     ; |6-4|COUNTER32B:inst7|Add0~9     ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~9     ; |6-4|COUNTER32B:inst7|Add0~10    ; cout             ;
+; |6-4|FTCTRL:inst|Div2CLK         ; |6-4|FTCTRL:inst|Div2CLK         ; regout           ;
+; |6-4|FTCTRL:inst|RST_CNT         ; |6-4|FTCTRL:inst|RST_CNT         ; combout          ;
+; |6-4|COUNTER32B:inst7|CQI[3]     ; |6-4|COUNTER32B:inst7|CQI[3]     ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[2]     ; |6-4|COUNTER32B:inst7|CQI[2]     ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[1]     ; |6-4|COUNTER32B:inst7|CQI[1]     ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[0]     ; |6-4|COUNTER32B:inst7|CQI[0]     ; regout           ;
+; |6-4|FTCTRL:inst|Div2CLK~0       ; |6-4|FTCTRL:inst|Div2CLK~0       ; combout          ;
+; |6-4|COUNTER32B:inst7|CQI[0]~0   ; |6-4|COUNTER32B:inst7|CQI[0]~0   ; combout          ;
+; |6-4|LOAD                        ; |6-4|LOAD                        ; padio            ;
+; |6-4|CLK_EN                      ; |6-4|CLK_EN                      ; padio            ;
+; |6-4|RST_CNT                     ; |6-4|RST_CNT                     ; padio            ;
+; |6-4|DOUT[3]                     ; |6-4|DOUT[3]                     ; padio            ;
+; |6-4|DOUT[2]                     ; |6-4|DOUT[2]                     ; padio            ;
+; |6-4|DOUT[1]                     ; |6-4|DOUT[1]                     ; padio            ;
+; |6-4|DOUT[0]                     ; |6-4|DOUT[0]                     ; padio            ;
+; |6-4|CLKK                        ; |6-4|CLKK~corein                 ; combout          ;
+; |6-4|FIN                         ; |6-4|FIN~corein                  ; combout          ;
+; |6-4|FIN~clkctrl                 ; |6-4|FIN~clkctrl                 ; outclk           ;
+; |6-4|FTCTRL:inst|RST_CNT~clkctrl ; |6-4|FTCTRL:inst|RST_CNT~clkctrl ; outclk           ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |6-4|COUNTER32B:inst7|Add0~13  ; |6-4|COUNTER32B:inst7|Add0~13  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~13  ; |6-4|COUNTER32B:inst7|Add0~14  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~17  ; |6-4|COUNTER32B:inst7|Add0~17  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~17  ; |6-4|COUNTER32B:inst7|Add0~18  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~21  ; |6-4|COUNTER32B:inst7|Add0~21  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~21  ; |6-4|COUNTER32B:inst7|Add0~22  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~25  ; |6-4|COUNTER32B:inst7|Add0~25  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~25  ; |6-4|COUNTER32B:inst7|Add0~26  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~29  ; |6-4|COUNTER32B:inst7|Add0~29  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~29  ; |6-4|COUNTER32B:inst7|Add0~30  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~33  ; |6-4|COUNTER32B:inst7|Add0~33  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~33  ; |6-4|COUNTER32B:inst7|Add0~34  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~37  ; |6-4|COUNTER32B:inst7|Add0~37  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~37  ; |6-4|COUNTER32B:inst7|Add0~38  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~41  ; |6-4|COUNTER32B:inst7|Add0~41  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~41  ; |6-4|COUNTER32B:inst7|Add0~42  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~45  ; |6-4|COUNTER32B:inst7|Add0~45  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~45  ; |6-4|COUNTER32B:inst7|Add0~46  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~49  ; |6-4|COUNTER32B:inst7|Add0~49  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~49  ; |6-4|COUNTER32B:inst7|Add0~50  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~53  ; |6-4|COUNTER32B:inst7|Add0~53  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~53  ; |6-4|COUNTER32B:inst7|Add0~54  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~57  ; |6-4|COUNTER32B:inst7|Add0~57  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~57  ; |6-4|COUNTER32B:inst7|Add0~58  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~61  ; |6-4|COUNTER32B:inst7|Add0~61  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~61  ; |6-4|COUNTER32B:inst7|Add0~62  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~65  ; |6-4|COUNTER32B:inst7|Add0~65  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~65  ; |6-4|COUNTER32B:inst7|Add0~66  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~69  ; |6-4|COUNTER32B:inst7|Add0~69  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~69  ; |6-4|COUNTER32B:inst7|Add0~70  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~73  ; |6-4|COUNTER32B:inst7|Add0~73  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~73  ; |6-4|COUNTER32B:inst7|Add0~74  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~77  ; |6-4|COUNTER32B:inst7|Add0~77  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~77  ; |6-4|COUNTER32B:inst7|Add0~78  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~81  ; |6-4|COUNTER32B:inst7|Add0~81  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~81  ; |6-4|COUNTER32B:inst7|Add0~82  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~85  ; |6-4|COUNTER32B:inst7|Add0~85  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~85  ; |6-4|COUNTER32B:inst7|Add0~86  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~89  ; |6-4|COUNTER32B:inst7|Add0~89  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~89  ; |6-4|COUNTER32B:inst7|Add0~90  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~93  ; |6-4|COUNTER32B:inst7|Add0~93  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~93  ; |6-4|COUNTER32B:inst7|Add0~94  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~97  ; |6-4|COUNTER32B:inst7|Add0~97  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~97  ; |6-4|COUNTER32B:inst7|Add0~98  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~101 ; |6-4|COUNTER32B:inst7|Add0~101 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~101 ; |6-4|COUNTER32B:inst7|Add0~102 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~105 ; |6-4|COUNTER32B:inst7|Add0~105 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~105 ; |6-4|COUNTER32B:inst7|Add0~106 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~109 ; |6-4|COUNTER32B:inst7|Add0~109 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~109 ; |6-4|COUNTER32B:inst7|Add0~110 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~113 ; |6-4|COUNTER32B:inst7|Add0~113 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~113 ; |6-4|COUNTER32B:inst7|Add0~114 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~117 ; |6-4|COUNTER32B:inst7|Add0~117 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~117 ; |6-4|COUNTER32B:inst7|Add0~118 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~121 ; |6-4|COUNTER32B:inst7|Add0~121 ; sumout           ;
+; |6-4|COUNTER32B:inst7|CQI[31]  ; |6-4|COUNTER32B:inst7|CQI[31]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[30]  ; |6-4|COUNTER32B:inst7|CQI[30]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[29]  ; |6-4|COUNTER32B:inst7|CQI[29]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[28]  ; |6-4|COUNTER32B:inst7|CQI[28]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[27]  ; |6-4|COUNTER32B:inst7|CQI[27]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[26]  ; |6-4|COUNTER32B:inst7|CQI[26]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[25]  ; |6-4|COUNTER32B:inst7|CQI[25]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[24]  ; |6-4|COUNTER32B:inst7|CQI[24]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[23]  ; |6-4|COUNTER32B:inst7|CQI[23]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[22]  ; |6-4|COUNTER32B:inst7|CQI[22]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[21]  ; |6-4|COUNTER32B:inst7|CQI[21]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[20]  ; |6-4|COUNTER32B:inst7|CQI[20]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[19]  ; |6-4|COUNTER32B:inst7|CQI[19]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[18]  ; |6-4|COUNTER32B:inst7|CQI[18]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[17]  ; |6-4|COUNTER32B:inst7|CQI[17]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[16]  ; |6-4|COUNTER32B:inst7|CQI[16]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[15]  ; |6-4|COUNTER32B:inst7|CQI[15]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[14]  ; |6-4|COUNTER32B:inst7|CQI[14]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[13]  ; |6-4|COUNTER32B:inst7|CQI[13]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[12]  ; |6-4|COUNTER32B:inst7|CQI[12]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[11]  ; |6-4|COUNTER32B:inst7|CQI[11]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[10]  ; |6-4|COUNTER32B:inst7|CQI[10]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[9]   ; |6-4|COUNTER32B:inst7|CQI[9]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[8]   ; |6-4|COUNTER32B:inst7|CQI[8]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[7]   ; |6-4|COUNTER32B:inst7|CQI[7]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[6]   ; |6-4|COUNTER32B:inst7|CQI[6]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[5]   ; |6-4|COUNTER32B:inst7|CQI[5]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[4]   ; |6-4|COUNTER32B:inst7|CQI[4]   ; regout           ;
+; |6-4|DOUT[31]                  ; |6-4|DOUT[31]                  ; padio            ;
+; |6-4|DOUT[30]                  ; |6-4|DOUT[30]                  ; padio            ;
+; |6-4|DOUT[29]                  ; |6-4|DOUT[29]                  ; padio            ;
+; |6-4|DOUT[28]                  ; |6-4|DOUT[28]                  ; padio            ;
+; |6-4|DOUT[27]                  ; |6-4|DOUT[27]                  ; padio            ;
+; |6-4|DOUT[26]                  ; |6-4|DOUT[26]                  ; padio            ;
+; |6-4|DOUT[25]                  ; |6-4|DOUT[25]                  ; padio            ;
+; |6-4|DOUT[24]                  ; |6-4|DOUT[24]                  ; padio            ;
+; |6-4|DOUT[23]                  ; |6-4|DOUT[23]                  ; padio            ;
+; |6-4|DOUT[22]                  ; |6-4|DOUT[22]                  ; padio            ;
+; |6-4|DOUT[21]                  ; |6-4|DOUT[21]                  ; padio            ;
+; |6-4|DOUT[20]                  ; |6-4|DOUT[20]                  ; padio            ;
+; |6-4|DOUT[19]                  ; |6-4|DOUT[19]                  ; padio            ;
+; |6-4|DOUT[18]                  ; |6-4|DOUT[18]                  ; padio            ;
+; |6-4|DOUT[17]                  ; |6-4|DOUT[17]                  ; padio            ;
+; |6-4|DOUT[16]                  ; |6-4|DOUT[16]                  ; padio            ;
+; |6-4|DOUT[15]                  ; |6-4|DOUT[15]                  ; padio            ;
+; |6-4|DOUT[14]                  ; |6-4|DOUT[14]                  ; padio            ;
+; |6-4|DOUT[13]                  ; |6-4|DOUT[13]                  ; padio            ;
+; |6-4|DOUT[12]                  ; |6-4|DOUT[12]                  ; padio            ;
+; |6-4|DOUT[11]                  ; |6-4|DOUT[11]                  ; padio            ;
+; |6-4|DOUT[10]                  ; |6-4|DOUT[10]                  ; padio            ;
+; |6-4|DOUT[9]                   ; |6-4|DOUT[9]                   ; padio            ;
+; |6-4|DOUT[8]                   ; |6-4|DOUT[8]                   ; padio            ;
+; |6-4|DOUT[7]                   ; |6-4|DOUT[7]                   ; padio            ;
+; |6-4|DOUT[6]                   ; |6-4|DOUT[6]                   ; padio            ;
+; |6-4|DOUT[5]                   ; |6-4|DOUT[5]                   ; padio            ;
+; |6-4|DOUT[4]                   ; |6-4|DOUT[4]                   ; padio            ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |6-4|COUNTER32B:inst7|Add0~13  ; |6-4|COUNTER32B:inst7|Add0~13  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~13  ; |6-4|COUNTER32B:inst7|Add0~14  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~17  ; |6-4|COUNTER32B:inst7|Add0~17  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~17  ; |6-4|COUNTER32B:inst7|Add0~18  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~21  ; |6-4|COUNTER32B:inst7|Add0~21  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~21  ; |6-4|COUNTER32B:inst7|Add0~22  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~25  ; |6-4|COUNTER32B:inst7|Add0~25  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~25  ; |6-4|COUNTER32B:inst7|Add0~26  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~29  ; |6-4|COUNTER32B:inst7|Add0~29  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~29  ; |6-4|COUNTER32B:inst7|Add0~30  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~33  ; |6-4|COUNTER32B:inst7|Add0~33  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~33  ; |6-4|COUNTER32B:inst7|Add0~34  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~37  ; |6-4|COUNTER32B:inst7|Add0~37  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~37  ; |6-4|COUNTER32B:inst7|Add0~38  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~41  ; |6-4|COUNTER32B:inst7|Add0~41  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~41  ; |6-4|COUNTER32B:inst7|Add0~42  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~45  ; |6-4|COUNTER32B:inst7|Add0~45  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~45  ; |6-4|COUNTER32B:inst7|Add0~46  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~49  ; |6-4|COUNTER32B:inst7|Add0~49  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~49  ; |6-4|COUNTER32B:inst7|Add0~50  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~53  ; |6-4|COUNTER32B:inst7|Add0~53  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~53  ; |6-4|COUNTER32B:inst7|Add0~54  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~57  ; |6-4|COUNTER32B:inst7|Add0~57  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~57  ; |6-4|COUNTER32B:inst7|Add0~58  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~61  ; |6-4|COUNTER32B:inst7|Add0~61  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~61  ; |6-4|COUNTER32B:inst7|Add0~62  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~65  ; |6-4|COUNTER32B:inst7|Add0~65  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~65  ; |6-4|COUNTER32B:inst7|Add0~66  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~69  ; |6-4|COUNTER32B:inst7|Add0~69  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~69  ; |6-4|COUNTER32B:inst7|Add0~70  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~73  ; |6-4|COUNTER32B:inst7|Add0~73  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~73  ; |6-4|COUNTER32B:inst7|Add0~74  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~77  ; |6-4|COUNTER32B:inst7|Add0~77  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~77  ; |6-4|COUNTER32B:inst7|Add0~78  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~81  ; |6-4|COUNTER32B:inst7|Add0~81  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~81  ; |6-4|COUNTER32B:inst7|Add0~82  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~85  ; |6-4|COUNTER32B:inst7|Add0~85  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~85  ; |6-4|COUNTER32B:inst7|Add0~86  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~89  ; |6-4|COUNTER32B:inst7|Add0~89  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~89  ; |6-4|COUNTER32B:inst7|Add0~90  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~93  ; |6-4|COUNTER32B:inst7|Add0~93  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~93  ; |6-4|COUNTER32B:inst7|Add0~94  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~97  ; |6-4|COUNTER32B:inst7|Add0~97  ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~97  ; |6-4|COUNTER32B:inst7|Add0~98  ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~101 ; |6-4|COUNTER32B:inst7|Add0~101 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~101 ; |6-4|COUNTER32B:inst7|Add0~102 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~105 ; |6-4|COUNTER32B:inst7|Add0~105 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~105 ; |6-4|COUNTER32B:inst7|Add0~106 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~109 ; |6-4|COUNTER32B:inst7|Add0~109 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~109 ; |6-4|COUNTER32B:inst7|Add0~110 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~113 ; |6-4|COUNTER32B:inst7|Add0~113 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~113 ; |6-4|COUNTER32B:inst7|Add0~114 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~117 ; |6-4|COUNTER32B:inst7|Add0~117 ; sumout           ;
+; |6-4|COUNTER32B:inst7|Add0~117 ; |6-4|COUNTER32B:inst7|Add0~118 ; cout             ;
+; |6-4|COUNTER32B:inst7|Add0~121 ; |6-4|COUNTER32B:inst7|Add0~121 ; sumout           ;
+; |6-4|COUNTER32B:inst7|CQI[31]  ; |6-4|COUNTER32B:inst7|CQI[31]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[30]  ; |6-4|COUNTER32B:inst7|CQI[30]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[29]  ; |6-4|COUNTER32B:inst7|CQI[29]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[28]  ; |6-4|COUNTER32B:inst7|CQI[28]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[27]  ; |6-4|COUNTER32B:inst7|CQI[27]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[26]  ; |6-4|COUNTER32B:inst7|CQI[26]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[25]  ; |6-4|COUNTER32B:inst7|CQI[25]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[24]  ; |6-4|COUNTER32B:inst7|CQI[24]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[23]  ; |6-4|COUNTER32B:inst7|CQI[23]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[22]  ; |6-4|COUNTER32B:inst7|CQI[22]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[21]  ; |6-4|COUNTER32B:inst7|CQI[21]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[20]  ; |6-4|COUNTER32B:inst7|CQI[20]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[19]  ; |6-4|COUNTER32B:inst7|CQI[19]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[18]  ; |6-4|COUNTER32B:inst7|CQI[18]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[17]  ; |6-4|COUNTER32B:inst7|CQI[17]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[16]  ; |6-4|COUNTER32B:inst7|CQI[16]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[15]  ; |6-4|COUNTER32B:inst7|CQI[15]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[14]  ; |6-4|COUNTER32B:inst7|CQI[14]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[13]  ; |6-4|COUNTER32B:inst7|CQI[13]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[12]  ; |6-4|COUNTER32B:inst7|CQI[12]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[11]  ; |6-4|COUNTER32B:inst7|CQI[11]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[10]  ; |6-4|COUNTER32B:inst7|CQI[10]  ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[9]   ; |6-4|COUNTER32B:inst7|CQI[9]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[8]   ; |6-4|COUNTER32B:inst7|CQI[8]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[7]   ; |6-4|COUNTER32B:inst7|CQI[7]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[6]   ; |6-4|COUNTER32B:inst7|CQI[6]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[5]   ; |6-4|COUNTER32B:inst7|CQI[5]   ; regout           ;
+; |6-4|COUNTER32B:inst7|CQI[4]   ; |6-4|COUNTER32B:inst7|CQI[4]   ; regout           ;
+; |6-4|DOUT[31]                  ; |6-4|DOUT[31]                  ; padio            ;
+; |6-4|DOUT[30]                  ; |6-4|DOUT[30]                  ; padio            ;
+; |6-4|DOUT[29]                  ; |6-4|DOUT[29]                  ; padio            ;
+; |6-4|DOUT[28]                  ; |6-4|DOUT[28]                  ; padio            ;
+; |6-4|DOUT[27]                  ; |6-4|DOUT[27]                  ; padio            ;
+; |6-4|DOUT[26]                  ; |6-4|DOUT[26]                  ; padio            ;
+; |6-4|DOUT[25]                  ; |6-4|DOUT[25]                  ; padio            ;
+; |6-4|DOUT[24]                  ; |6-4|DOUT[24]                  ; padio            ;
+; |6-4|DOUT[23]                  ; |6-4|DOUT[23]                  ; padio            ;
+; |6-4|DOUT[22]                  ; |6-4|DOUT[22]                  ; padio            ;
+; |6-4|DOUT[21]                  ; |6-4|DOUT[21]                  ; padio            ;
+; |6-4|DOUT[20]                  ; |6-4|DOUT[20]                  ; padio            ;
+; |6-4|DOUT[19]                  ; |6-4|DOUT[19]                  ; padio            ;
+; |6-4|DOUT[18]                  ; |6-4|DOUT[18]                  ; padio            ;
+; |6-4|DOUT[17]                  ; |6-4|DOUT[17]                  ; padio            ;
+; |6-4|DOUT[16]                  ; |6-4|DOUT[16]                  ; padio            ;
+; |6-4|DOUT[15]                  ; |6-4|DOUT[15]                  ; padio            ;
+; |6-4|DOUT[14]                  ; |6-4|DOUT[14]                  ; padio            ;
+; |6-4|DOUT[13]                  ; |6-4|DOUT[13]                  ; padio            ;
+; |6-4|DOUT[12]                  ; |6-4|DOUT[12]                  ; padio            ;
+; |6-4|DOUT[11]                  ; |6-4|DOUT[11]                  ; padio            ;
+; |6-4|DOUT[10]                  ; |6-4|DOUT[10]                  ; padio            ;
+; |6-4|DOUT[9]                   ; |6-4|DOUT[9]                   ; padio            ;
+; |6-4|DOUT[8]                   ; |6-4|DOUT[8]                   ; padio            ;
+; |6-4|DOUT[7]                   ; |6-4|DOUT[7]                   ; padio            ;
+; |6-4|DOUT[6]                   ; |6-4|DOUT[6]                   ; padio            ;
+; |6-4|DOUT[5]                   ; |6-4|DOUT[5]                   ; padio            ;
+; |6-4|DOUT[4]                   ; |6-4|DOUT[4]                   ; padio            ;
++--------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Dec 09 20:04:02 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off 6-4 -c 6-4
+Info: Using vector source file "D:/Documents/Desktop/EDA/EDA实验/EDA实验四/6-4/6-4.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of 6-4.vwf called 6-4.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      18.38 %
+Info: Number of transitions in simulation is 1044
+Info: Vector file 6-4.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Sat Dec 09 20:04:03 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

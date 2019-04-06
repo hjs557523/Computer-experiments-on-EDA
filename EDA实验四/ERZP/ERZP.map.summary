@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Dec 09 20:41:27 2017
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : ERZP
+Top-level Entity Name : ERZP
+Family : Cyclone III
+Total logic elements : 12
+    Total combinational functions : 12
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

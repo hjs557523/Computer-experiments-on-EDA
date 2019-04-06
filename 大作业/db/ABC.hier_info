@@ -1,0 +1,8 @@
+|ABC
+clk => k2.CLK
+clk => q1.CLK
+d => q1.ENA
+ctrl => q.OE
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+

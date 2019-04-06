@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Dec 08 15:16:27 2017
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : REG32B
+Top-level Entity Name : REG32B
+Family : Cyclone III
+Device : EP3C5E144C8
+Timing Models : Final
+Total logic elements : 0 / 5,136 ( 0 % )
+    Total combinational functions : 0 / 5,136 ( 0 % )
+    Dedicated logic registers : 0 / 5,136 ( 0 % )
+Total registers : 0
+Total pins : 65 / 95 ( 68 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

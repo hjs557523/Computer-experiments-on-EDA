@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Jan 05 18:19:51 2018
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : yuequyanzou
+Top-level Entity Name : yuequyanzou
+Family : Cyclone III
+Device : EP3C10E144C8
+Timing Models : Final
+Total logic elements : 54 / 10,320 ( < 1 % )
+    Total combinational functions : 54 / 10,320 ( < 1 % )
+    Dedicated logic registers : 31 / 10,320 ( < 1 % )
+Total registers : 31
+Total pins : 7 / 95 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 1,024 / 423,936 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )
